@@ -7,6 +7,8 @@
 
 namespace BinaryJazz\Genrenator;
 
+use BinaryJazz\Genrenator\Storynator;
+
 /**
  * Bootstrap the plugin.
  *
@@ -23,6 +25,8 @@ function shortcode_genre() {
 }
 
 function shortcode_story() {
+	return Storynator\generate_story();
+}
 
 function get_thing( $things ) {
 	$index = array_rand( $things );
