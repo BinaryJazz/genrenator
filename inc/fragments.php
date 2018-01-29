@@ -330,3 +330,17 @@ function instruments() {
 function get_instrument() {
 	return Genrenator\get_thing( instruments() );
 }
+
+function beats() {
+	return [
+		// Translators: %s is a random adjective.
+		sprintf( __( '%s beat', 'genrenator' ), get_adjective() ),
+		// Translators: %s is a random adjective.
+		sprintf( __( '%s bass', 'genrenator' ), get_adjective() ),
+		sprintf( '%1$s %2$s', get_adjective(), get_instrument() ),
+	];
+}
+
+function get_beat() {
+	return Genrenator\get_thing( beats() );
+}
