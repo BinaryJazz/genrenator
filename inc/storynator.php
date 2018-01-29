@@ -33,3 +33,9 @@ function story_ideas() {
 		__( 'Nothing calms me down more than %s.', 'genrenator' ),
 	];
 }
+
+function generate_story() {
+	$story = Genrenator\get_thing( story_ideas() );
+	$genre = Genrenator\generate_genre();
+	return ucfirst( filter_punctuation( sprintf( $story, $genre ) ) );
+}
