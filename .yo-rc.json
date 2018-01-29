@@ -1,0 +1,16 @@
+{
+  "generator-hm-plugin": {
+    "client": "Binary Jazz",
+    "name": "Genrenator",
+    "homepage": "https://binaryjazz.us",
+    "description": "Random genre creation API.",
+    "version": "0.1",
+    "author": "The folks at Binary Jazz",
+    "authorurl": "https://binaryjazz.us",
+    "slug": "genrenator",
+    "project": "BinaryJazz",
+    "namespace": "Genrenator",
+    "year": 2018,
+    "currentVersionWP": "4.9.2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "genrenator",
+  "description": "Random genre creation API.",
+  "license": "GPLv3",
+  "authors": [
+    "The folks at Binary Jazz"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
