@@ -39,3 +39,13 @@ function generate_story() {
 	$genre = Genrenator\generate_genre();
 	return ucfirst( filter_punctuation( sprintf( $story, $genre ) ) );
 }
+
+function filter_punctuation( $string ) {
+	// Filter out spaces before periods.
+	$string = str_replace( ' .', '.', $string );
+
+	// Filter out spaces before question marks.
+	$string = str_replace( ' ?', '?', $string );
+
+	return $string;
+}
