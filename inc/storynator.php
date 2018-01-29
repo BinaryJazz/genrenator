@@ -12,10 +12,12 @@ namespace BinaryJazz\Genrenator\Storynator;
 use BinaryJazz\Genrenator;
 
 function story_ideas() {
+	return [
 		// Prompts.
 		__( 'That was the year I first listened to %s.', 'genrenator' ),
 		__( 'What was that? I can\'t hear you over the %s.', 'genrenator' ),
 		__( 'You probably haven\'t heard of %s.', 'genrenator' ),
+		__( '%s is where it\'s at.', 'genrenator' ),
 		// Decades.
 		__( 'My twenties were all about listening to %s.', 'genrenator' ),
 		__( 'You\'re never too old to listen to %s.', 'genrenator' ),
