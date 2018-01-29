@@ -168,18 +168,46 @@ class Fragments {
 			'zolo',
 		];
 	}
+
+	/**
+	 * List of prefixes.
+	 *
+	 * @return array Genre prefixes.
+	 */
+	private function prefixes() {
+		return [
 			'post-',
-			'neo',
-			'dwn',
 			'folk-',
-			'nu',
+			'fidget-',
+			'turbo-',
 			'cyber',
 			'electro',
-			'euro',
 			'synth',
-			'kraut',
-			'stomp and',
-			// Genre suffixes.
+			'shoe',
+			'hard',
+			'neuro',
+			'dub',
+			'grind',
+			'retro ',
+			'cat ',
+			'neo ',
+			'dwn ',
+			'nu ',
+			'alt ',
+			'acid ',
+			'ambient ',
+			__( 'stomp and ', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
+			__( 'drum and ', 'genrenator' ), // This is also a phrase.
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-driven ', 'genrenator' ), $this->get_instrument ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-heavy ', 'genrenator' ), $this->get_instrument() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-based ', 'genrenator' ), $this->get_instrument() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-centric ', 'genrenator' ), $this->get_instrument() ),
+		];
+	}
 			'tronica',
 			'timism',
 			// Regions.
