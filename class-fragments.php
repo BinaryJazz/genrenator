@@ -63,41 +63,111 @@ class Fragments {
 			'2-step',
 			'garage',
 			'left-field',
+		];
+	}
+
+	/**
+	 * List of Adjectives.
+	 *
+	 * @return array Qualifiers for genres.
+	 */
+	private function adjectives() {
+		return [
+			// A.
+			'abstract',
+			'acoustic',
 			'adult',
-			'experimental',
-			'blue eyed',
-			'latin',
-			'funk',
-			'chamber',
-			'garage',
-			'contemporary',
-			'dirty',
-			'big',
-			'binary',
-			'hip',
-			'southern',
-			'hard',
-			'new',
-			'permanent',
-			'underground',
-			'teen',
-			'modern',
-			'tropical',
-			'latin',
-			'mellow',
-			'black',
-			'viral',
-			'urban',
-			'classic',
 			'album',
 			'arena',
-			'indie',
-			'soft',
-			'gothic',
-			'retro',
+			// B.
+			'baroque',
+			'bass',
+			'bebop',
+			'big',
+			'binary',
+			'black',
+			'blue eyed',
+			'bop',
+			'bubble',
+			// C.
+			'chamber',
+			'christian',
+			'classic',
+			'contemporary',
+			// D.
+			'dad',
+			'deep',
+			'dirty',
+			'doo wop',
+			'dream',
+			'drone',
+			// E.
+			'ethereal',
+			'experimental',
+			// F.
+			'flutter',
+			// G.
 			'gangster',
+			'garage',
+			'glam',
+			'gothic',
+			'grim',
+			// H.
+			'happy',
+			'hard',
+			'hip',
+			// I.
+			'indie',
+			'intelligent',
+			// J.
+			'jesus',
+			// K.
+			// L.
+			// M.
+			'mellow',
+			'modern',
+			// N.
+			'nasty',
+			'new',
+			// O.
+			'orchestral',
+			// P.
+			'permanent',
+			'power',
+			// Q.
+			// R.
+			'religious',
 			'roots',
-			// Genre prefixes.
+			// S.
+			'shiver',
+			'soft',
+			'southern',
+			'swirl',
+			// T.
+			'technical',
+			'teen',
+			'terror',
+			'thrash',
+			'traditional',
+			'tribal',
+			'tribute',
+			'tropical',
+			'turbo',
+			'twee',
+			// U.
+			'underground',
+			'urban',
+			// V.
+			'vintage',
+			'viral',
+			'vocal',
+			// W.
+			// X.
+			// Y.
+			// Z.
+			'zolo',
+		];
+	}
 			'post-',
 			'neo',
 			'dwn',
