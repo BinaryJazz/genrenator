@@ -291,4 +291,13 @@ class Fragments {
 			'guitar',
 		];
 	}
+
+	/**
+	 * Returns a random instrument from instruments().
+	 *
+	 * @return string An instrument.
+	 */
+	private function get_instrument() {
+		return array_rand( $this->instruments() );
+	}
 }
