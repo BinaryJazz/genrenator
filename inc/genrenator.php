@@ -24,7 +24,7 @@ function patterns() {
 		'%genre%#%suffix%',
 		'%prefix%#%genre%#/#%genre%#%suffix%',
 		'%region%#%genre%',
-		'%beat%# of #%genre%',
+		'the #%beat%# of #%genre%',
 		'%instrument%# #%beat%',
 	];
 }
