@@ -71,7 +71,20 @@ function concat_fragments( $pattern ) {
 
 		$i++;
 	}
-	return str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
+
+	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
+
+	// No space before 'ism'.
+	if ( in_array( ' ism', $shards ) ) {
+		$string = str_replace( ' ism', 'ism', $string );
+	}
+
+	// Filter spaces before/after slashes.
+	if ( in_array( '/', $shards ) ) {
+		$string = str_replace( [ ' /', '/ ' ], '/', $string );
+	}
+
+	return $string;
 }
 
 function replace_placeholders( $fragment ) {
