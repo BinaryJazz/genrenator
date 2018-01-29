@@ -266,6 +266,29 @@ class Fragments {
 			'world ',
 		];
 	}
+
+	/**
+	 * List of instruments.
+	 *
+	 * @return array Various instruments.
+	 */
+	private function instruments() {
+		return [
+			'banjo',
+			'flute',
+			'gong',
+			'drum',
+			'lute',
+			'theremin',
+			'triangle',
+			'cowbell',
+			'percussion',
+			'trombone',
+			'vocal',
+			'zither',
+			'synth',
+			'bass',
+			'guitar',
 		];
 	}
 }
