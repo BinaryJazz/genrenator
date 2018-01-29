@@ -94,6 +94,11 @@ function concat_fragments( $pattern ) {
 		$string = str_replace( [ ' /', '/ ' ], '/', $string );
 	}
 
+	// Let's not have any accidental rapism.
+	if ( strpos( $string, 'rapism' ) ) {
+		$string = str_replace( 'rapism', 'rap', $string );
+	}
+
 	return $string;
 }
 
