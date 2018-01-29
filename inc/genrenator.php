@@ -18,6 +18,12 @@ function patterns() {
 		'%prefix%#%genre%#%suffix%',
 		'%adjective%#%genre%',
 		'%adjective%#%region%#%genre%',
+		'%prefix%#%genre%',
+		'%region%#%prefix%#%genre%#%suffix%',
+		'%region%#%genre%#%suffix%',
+		'%genre%#%suffix%',
+		'%prefix%#%genre%/#%genre%#%suffix%',
+		'%region%#%genre%',
 	];
 }
 
