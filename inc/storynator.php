@@ -9,8 +9,9 @@
 
 namespace BinaryJazz\Genrenator\Storynator;
 
-function story_ideas( $genre ) {
-	$stories = [
+use BinaryJazz\Genrenator;
+
+function story_ideas() {
 		// Prompts.
 		__( 'That was the year I first listened to %s.', 'genrenator' ),
 		__( 'What was that? I can\'t hear you over the %s.', 'genrenator' ),
