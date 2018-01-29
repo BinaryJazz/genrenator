@@ -22,8 +22,10 @@ function patterns() {
 		'%region%#%prefix%#%genre%#%suffix%',
 		'%region%#%genre%#%suffix%',
 		'%genre%#%suffix%',
-		'%prefix%#%genre%/#%genre%#%suffix%',
+		'%prefix%#%genre%#/#%genre%#%suffix%',
 		'%region%#%genre%',
+		'%beat%# of #%genre%',
+		'%instrument%# #%beat%',
 	];
 }
 
