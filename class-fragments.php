@@ -11,10 +11,8 @@
  * Main Fragments class.
  */
 class Fragments {
-	public static $pieces;
 
 	public function __construct() {
-		$this->pieces = $this->the_pieces();
 	}
 
 	/**
