@@ -16,14 +16,12 @@ class Fragments {
 	}
 
 	/**
-	 * Genre parts.
+	 * The list of genres.
 	 *
-	 * @todo         Add parameters for % likelihood for the part to appear at the beginning, middle or end of a genre. E.g.: 'pop' => [ 0, 10, 90 ],
-	 * @return array An array of genre pieces.
+	 * @return array A list of genres.
 	 */
-	private function the_pieces() {
+	private function genres() {
 		return [
-			// Common genres/endings.
 			'pop',
 			'dance',
 			'rap',
@@ -36,7 +34,6 @@ class Fragments {
 			'singer-songwriter',
 			'punk',
 			'country',
-			// Less common genres/endings.
 			'house',
 			'trap',
 			'EBM',
@@ -61,7 +58,6 @@ class Fragments {
 			'latino',
 			'room',
 			'noise',
-			// Genre qualifiers.
 			'adult',
 			'experimental',
 			'blue eyed',
