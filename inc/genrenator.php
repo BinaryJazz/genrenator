@@ -84,6 +84,11 @@ function concat_fragments( $pattern ) {
 		$string = str_replace( ' timism', 'timism', $string );
 	}
 
+	// Also tronica.
+	if ( in_array( ' tronica', $shards ) ) {
+		$string = str_replace( ' tronica', 'tronica', $string );
+	}
+
 	// Filter spaces before/after slashes.
 	if ( in_array( '/', $shards ) ) {
 		$string = str_replace( [ ' /', '/ ' ], '/', $string );
