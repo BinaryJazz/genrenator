@@ -1,6 +1,8 @@
 <?php
 /**
  * Genrenator
+ *
+ * @package Genrenator
  */
 
 namespace BinaryJazz\Genrenator;
@@ -12,4 +14,14 @@ namespace BinaryJazz\Genrenator;
  */
 function bootstrap() {
 	// Add all your plugin hooks here.
+	add_shortcode( 'genrenator-genre', __NAMESPACE__ . '\\shortcode_genre' );
+	add_shortcode( 'genrenator-story', __NAMESPACE__ . '\\shortcode_story' );
+}
+
+function shortcode_genre() {
+	return generate_genre();
+}
+
+function shortcode_story() {
+
 }
