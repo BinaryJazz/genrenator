@@ -77,6 +77,7 @@ function adjectives() {
 		'abstract',
 		'acoustic',
 		'adult',
+		'aggressive',
 		'album',
 		'arena',
 		// B.
@@ -90,12 +91,14 @@ function adjectives() {
 		'bop',
 		'bubble',
 		// C.
+		'calming',
 		'chamber',
 		'christian',
 		'classic',
 		'contemporary',
 		// D.
 		'dad',
+		'dancy',
 		'deep',
 		'dirty',
 		'doo wop',
@@ -115,6 +118,7 @@ function adjectives() {
 		// H.
 		'happy',
 		'hard',
+		'heavy',
 		'hip',
 		// I.
 		'indie',
@@ -133,13 +137,17 @@ function adjectives() {
 		'orchestral',
 		// P.
 		'permanent',
+		'pounding',
 		'power',
+		'pulsing',
 		// Q.
 		// R.
 		'religious',
+		'rippling',
 		'roots',
 		// S.
 		'shiver',
+		'smooth',
 		'soft',
 		'southern',
 		'swirl',
@@ -276,6 +284,12 @@ function regions() {
 		'kraut ',
 		'viking ',
 		'world ',
+		'eastern ',
+		'west coast ',
+		'east coast ',
+		'florida ',
+		'swedish ',
+		'tibetan ',
 	];
 }
 
