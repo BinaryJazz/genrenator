@@ -24,4 +24,7 @@ function shortcode_genre() {
 
 function shortcode_story() {
 
+function get_thing( $things ) {
+	$index = array_rand( $things );
+	return $things[ $index ];
 }

@@ -9,6 +9,8 @@
 
 namespace BinaryJazz\Genrenator\Fragments;
 
+use BinaryJazz\Genrenator;
+
 /**
  * The list of genres.
  *
@@ -61,9 +63,7 @@ function genres() {
 }
 
 function get_genre() {
-	$genres = genres();
-	$index  = array_rand( $genres );
-	return $genres[ $index ];
+	return Genrenator\get_thing( genres() );
 }
 
 /**
@@ -170,9 +170,7 @@ function adjectives() {
 }
 
 function get_adjective() {
-	$adjectives = adjectives();
-	$index      = array_rand( $adjectives );
-	return $adjectives[ $index ];
+	return Genrenator\get_thing( adjectives() );
 }
 
 /**
@@ -216,9 +214,7 @@ function prefixes() {
 }
 
 function get_prefix() {
-	$prefixes = prefixes();
-	$index    = array_rand( $prefixes );
-	return $prefixes[ $index ];
+	return Genrenator\get_thing( prefixes() );
 }
 
 /**
@@ -259,9 +255,7 @@ function suffixes() {
 }
 
 function get_suffix() {
-	$suffixes = suffixes();
-	$index    = array_rand( $suffixes );
-	return $suffixes[ $index ];
+	return Genrenator\get_thing( suffixes() );
 }
 
 /**
@@ -286,9 +280,7 @@ function regions() {
 }
 
 function get_region() {
-	$regions = regions();
-	$index   = array_rand( $regions );
-	return $regions[ $index ];
+	return Genrenator\get_thing( regions() );
 }
 
 /**
@@ -322,7 +314,5 @@ function instruments() {
  * @return string An instrument.
  */
 function get_instrument() {
-	$instruments = instruments();
-	$index       = array_rand( $instruments );
-	return $instruments[ $index ];
+	return Genrenator\get_thing( instruments() );
 }
