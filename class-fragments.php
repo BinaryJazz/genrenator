@@ -7,6 +7,9 @@
  * @package Genrenator
  */
 
+/**
+ * Main Fragments class.
+ */
 class Fragments {
 	public static $pieces;
 
