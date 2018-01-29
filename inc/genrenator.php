@@ -65,6 +65,7 @@ function concat_fragments( $pattern ) {
 				$shards[ $i ] = replace_placeholders( 'instrument' );
 				break;
 			default:
+				$shards[ $i ] = $piece;
 				break;
 		}
 
