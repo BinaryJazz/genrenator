@@ -79,6 +79,11 @@ function concat_fragments( $pattern ) {
 		$string = str_replace( ' ism', 'ism', $string );
 	}
 
+	// Also no space before 'timism'.
+	if ( in_array( ' timism', $shards ) ) {
+		$string = str_replace( ' timism', 'timism', $string );
+	}
+
 	// Filter spaces before/after slashes.
 	if ( in_array( '/', $shards ) ) {
 		$string = str_replace( [ ' /', '/ ' ], '/', $string );
