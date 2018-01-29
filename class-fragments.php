@@ -208,9 +208,43 @@ class Fragments {
 			sprintf( __( '%s-centric ', 'genrenator' ), $this->get_instrument() ),
 		];
 	}
+
+	/**
+	 * List of suffixes.
+	 *
+	 * @return array Genre suffixes.
+	 */
+	private function suffixes() {
+		return [
+			'-step',
+			'-grind',
+			'-fox',
+			'future',
 			'tronica',
 			'timism',
-			// Regions.
+			'gaze',
+			'ism',
+			'bop',
+			'core',
+			' road',
+			' music',
+			' gold',
+			' wave',
+			' room',
+			' dirt',
+			' electronica',
+			' ensembles',
+			' fusion',
+			' punk',
+			' holler',
+			__( ' in the dark', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
+			// Translators: %s is a random instrument.
+			sprintf( __( ' with hints of %s', 'genrenator' ), $this->get_instrument() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( ' with prominent %s', 'genrenator' ), $this->get_instrument() ),
+
+		];
+	}
 			'k-',
 			'j-',
 			'canadian',
