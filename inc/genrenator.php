@@ -58,6 +58,12 @@ function concat_fragments( $pattern ) {
 			case '%suffix%':
 				$shards[ $i ] = replace_placeholders( 'suffix' );
 				break;
+			case '%beat%':
+				$shards[ $i ] = replace_placeholders( 'beat' );
+				break;
+			case '%instrument%':
+				$shards[ $i ] = replace_placeholders( 'instrument' );
+				break;
 			default:
 				break;
 		}
