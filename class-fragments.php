@@ -245,10 +245,27 @@ class Fragments {
 
 		];
 	}
+
+	/**
+	 * List of regions.
+	 *
+	 * @return array Places genres might come from.
+	 */
+	private function regions() {
+		return [
+			'mexican ',
+			'latin ',
 			'k-',
 			'j-',
-			'canadian',
-			'uk',
+			'canadian ',
+			'uk ',
+			'southern ',
+			'euro',
+			'kraut ',
+			'viking ',
+			'world ',
+		];
+	}
 		];
 	}
 }
