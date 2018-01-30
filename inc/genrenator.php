@@ -59,12 +59,9 @@ function concat_fragments( $pattern ) {
 			case '%beat%':
 				$shards[ $i ] = replace_placeholders( 'beat' );
 				break;
-			case '%instrument%':
-				$shards[ $i ] = replace_placeholders( 'instrument' );
-				break;
 			default:
-				if ( in_array( $piece , FRAGMENT_PIECES ) ) {
-					$fragment   = str_replace( '%', '', $piece );
+				$fragment   = str_replace( '%', '', $piece );
+				if ( in_array( $fragment, FRAGMENT_PIECES ) ) {
 					$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
 					$vector     = new $class_name();
 

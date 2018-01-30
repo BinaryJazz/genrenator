@@ -19,9 +19,11 @@ require_once __DIR__ . '/inc/storynator.php';
 const FRAGMENT_PIECES = [
 	'fragments',
 	'genre',
+	'instrument',
 ];
-require_once __DIR__ . '/inc/fragments/fragments.php';
-require_once __DIR__ . '/inc/fragments/genre.php';
+foreach ( FRAGMENT_PIECES as $fragment_piece ) {
+	require_once __DIR__ . '/inc/fragments/' . $fragment_piece . '.php';
+}
 
 // Kick it off.
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );

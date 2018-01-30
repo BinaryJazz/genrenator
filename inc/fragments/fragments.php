@@ -24,6 +24,7 @@ abstract class fragments {
 	}
 }
 
+
 /**
  * List of Adjectives.
  *
@@ -145,6 +146,7 @@ function get_adjective() {
  * @return array Genre prefixes.
  */
 function prefixes() {
+	$instrument = new instrument();
 	return [
 		'post-',
 		'folk-',
@@ -169,13 +171,13 @@ function prefixes() {
 		__( 'stomp and ', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
 		__( 'drum and ', 'genrenator' ), // This is also a phrase.
 		// Translators: %s is a random instrument.
-		sprintf( __( '%s-driven ', 'genrenator' ), get_instrument() ),
+		sprintf( __( '%s-driven ', 'genrenator' ), $instrument->get_element() ),
 		// Translators: %s is a random instrument.
-		sprintf( __( '%s-heavy ', 'genrenator' ), get_instrument() ),
+		sprintf( __( '%s-heavy ', 'genrenator' ), $instrument->get_element() ),
 		// Translators: %s is a random instrument.
-		sprintf( __( '%s-based ', 'genrenator' ), get_instrument() ),
+		sprintf( __( '%s-based ', 'genrenator' ), $instrument->get_element() ),
 		// Translators: %s is a random instrument.
-		sprintf( __( '%s-centric ', 'genrenator' ), get_instrument() ),
+		sprintf( __( '%s-centric ', 'genrenator' ), $instrument->get_element() ),
 	];
 }
 
@@ -189,6 +191,7 @@ function get_prefix() {
  * @return array Genre suffixes.
  */
 function suffixes() {
+	$instrument = new instrument();
 	return [
 		'-step',
 		'-grind',
@@ -213,9 +216,9 @@ function suffixes() {
 		' holler',
 		__( ' in the dark', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
 		// Translators: %s is a random instrument.
-		sprintf( __( ' with hints of %s', 'genrenator' ), get_instrument() ),
+		sprintf( __( ' with hints of %s', 'genrenator' ), $instrument->get_element() ),
 		// Translators: %s is a random instrument.
-		sprintf( __( ' with prominent %s', 'genrenator' ), get_instrument() ),
+		sprintf( __( ' with prominent %s', 'genrenator' ), $instrument->get_element() ),
 
 	];
 }
@@ -255,47 +258,14 @@ function get_region() {
 	return Genrenator\get_thing( regions() );
 }
 
-/**
- * List of instruments.
- *
- * @return array Various instruments.
- */
-function instruments() {
-	return [
-		'banjo',
-		'flute',
-		'gong',
-		'drum',
-		'lute',
-		'theremin',
-		'triangle',
-		'cowbell',
-		'percussion',
-		'trombone',
-		'vocal',
-		'zither',
-		'synth',
-		'bass',
-		'guitar',
-	];
-}
-
-/**
- * Returns a random instrument from instruments().
- *
- * @return string An instrument.
- */
-function get_instrument() {
-	return Genrenator\get_thing( instruments() );
-}
-
 function beats() {
+	$instrument = new instrument();
 	return [
 		// Translators: %s is a random adjective.
 		sprintf( __( '%s beat', 'genrenator' ), get_adjective() ),
 		// Translators: %s is a random adjective.
 		sprintf( __( '%s bass', 'genrenator' ), get_adjective() ),
-		sprintf( '%1$s %2$s', get_adjective(), get_instrument() ),
+		sprintf( '%1$s %2$s', get_adjective(), $instrument->get_element() ),
 	];
 }
 
