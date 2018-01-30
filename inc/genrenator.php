@@ -44,9 +44,6 @@ function concat_fragments( $pattern ) {
 	foreach ( $pieces as $piece ) {
 
 		switch ( $piece ) {
-			case '%region%':
-				$shards[ $i ] = replace_placeholders( 'region' ) . ' ';
-				break;
 			default:
 				$fragment   = str_replace( '%', '', $piece );
 				if ( in_array( $fragment, FRAGMENT_PIECES ) ) {
@@ -90,10 +87,6 @@ function concat_fragments( $pattern ) {
 	}
 
 	return $string;
-}
-
-function replace_placeholders( $fragment ) {
-	return str_replace( "$fragment", call_user_func( __NAMESPACE__ . "\\Fragments\\get_$fragment" ), $fragment );
 }
 
 function get_genre() {
