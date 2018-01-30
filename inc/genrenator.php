@@ -45,7 +45,7 @@ function concat_fragments( $pattern ) {
 
 		$fragment = str_replace( '%', '', $piece );
 		if ( in_array( $fragment, FRAGMENT_PIECES ) ) {
-			$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
+			$class_name = __NAMESPACE__ . "\\Fragments\\$fragment";
 			$vector     = new $class_name();
 
 			$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
