@@ -40,7 +40,6 @@ function generate_genre() {
 function concat_fragments( $pattern ) {
 	$pieces = explode( '#', $pattern );
 	$shards = [];
-	$count  = count( $pieces );
 	$i      = 0;
 	foreach ( $pieces as $piece ) {
 
@@ -72,6 +71,7 @@ function concat_fragments( $pattern ) {
 					$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
 					break;
 				}
+				$shards [ $i ] = $piece;
 		}
 
 		$i ++;
