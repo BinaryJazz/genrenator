@@ -106,7 +106,7 @@ function concat_fragments( $pattern ) {
 }
 
 function replace_placeholders( $fragment ) {
-
+	return str_replace( "$fragment", call_user_func( __NAMESPACE__ . "\\Fragments\\get_$fragment" ), $fragment );
 }
 
 function get_genre() {
