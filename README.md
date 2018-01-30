@@ -1,5 +1,5 @@
 # Genrenator #
-**Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)
+**Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)  
 **Description:**       Random genre creation API.  
 **Stable tag:**        0.1  
 **License:**           GPLv3
