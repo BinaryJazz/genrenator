@@ -44,17 +44,8 @@ function concat_fragments( $pattern ) {
 	foreach ( $pieces as $piece ) {
 
 		switch ( $piece ) {
-			case '%prefix%':
-				$shards[ $i ] = replace_placeholders( 'prefix' );
-				break;
-			case '%adjective%':
-				$shards[ $i ] = replace_placeholders( 'adjective' ) . ' ';
-				break;
 			case '%region%':
 				$shards[ $i ] = replace_placeholders( 'region' ) . ' ';
-				break;
-			case '%suffix%':
-				$shards[ $i ] = replace_placeholders( 'suffix' );
 				break;
 			case '%beat%':
 				$shards[ $i ] = replace_placeholders( 'beat' );
