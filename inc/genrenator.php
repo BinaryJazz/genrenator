@@ -15,7 +15,7 @@ use BinaryJazz\Genrenator\Storynator;
 
 function patterns() {
 	return [
-		'%genre%',
+		'%beat%# #%genre%',
 		'%prefix%#%genre%#%suffix%',
 		'%adjective%#%genre%',
 		'%adjective%#%region%#%genre%',
