@@ -2,7 +2,7 @@
 **Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)  
 **Description:**       Random genre creation API.  
 **Stable tag:**        0.1  
-**License:**           GPLv3
+**License:**           GPLv3  
 **License URI:**       http://www.gnu.org/licenses/gpl-3.0.html  
 
 ## What is this thing? ##
