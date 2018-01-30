@@ -21,7 +21,10 @@ const FRAGMENT_PIECES = [
 	'genre',
 	'instrument',
 	'prefix',
+	'suffix',
 	'adjective',
+	'beat',
+	'region',
 ];
 foreach ( FRAGMENT_PIECES as $fragment_piece ) {
 	require_once __DIR__ . '/inc/fragments/' . $fragment_piece . '.php';

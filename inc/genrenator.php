@@ -47,9 +47,6 @@ function concat_fragments( $pattern ) {
 			case '%region%':
 				$shards[ $i ] = replace_placeholders( 'region' ) . ' ';
 				break;
-			case '%beat%':
-				$shards[ $i ] = replace_placeholders( 'beat' );
-				break;
 			default:
 				$fragment   = str_replace( '%', '', $piece );
 				if ( in_array( $fragment, FRAGMENT_PIECES ) ) {

@@ -30,6 +30,7 @@ class suffix extends fragments {
 	];
 
 	public function translatable_suffixes() {
+		$instrument = new instrument();
 		return [
 			__( ' in the dark', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
 			// Translators: %s is a random instrument.
