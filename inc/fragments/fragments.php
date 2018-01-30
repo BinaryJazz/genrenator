@@ -11,59 +11,17 @@ namespace BinaryJazz\Genrenator\Fragments;
 
 use BinaryJazz\Genrenator;
 
-/**
- * The list of genres.
- *
- * @return array A list of genres.
- */
-function genres() {
-	return [
-		'pop',
-		'dance',
-		'rap',
-		'alternative',
-		'rock',
-		'hip hop',
-		'reggae',
-		'metal',
-		'R&B',
-		'singer-songwriter',
-		'punk',
-		'country',
-		'house',
-		'trap',
-		'EBM',
-		'EDM',
-		'latin',
-		'grunge',
-		'sludge',
-		'contemporary',
-		'folk',
-		'turntablism',
-		'goth',
-		'standards',
-		'soul',
-		'blues',
-		'jazz',
-		'en español',
-		'latino',
-		'noise',
-		'funk',
-		'indie',
-		'grime',
-		'rockabilly',
-		'swing',
-		'tango',
-		'trance',
-		'ambient',
-		'2-step',
-		'garage',
-		'left-field',
-	];
-}
+abstract class fragments {
 
-function get_genre() {
-	return Genrenator\get_thing( genres() );
+	abstract public function elements();
+
+	public function get_element() {
+		return Genrenator\get_thing( $this->elements() );
+	}
+
+	public function texturize() {
+		return $this->get_element();
+	}
 }
 
 /**

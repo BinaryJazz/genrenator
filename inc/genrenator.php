@@ -15,6 +15,7 @@ use BinaryJazz\Genrenator\Storynator;
 
 function patterns() {
 	return [
+		'%genre%',
 		'%prefix%#%genre%#%suffix%',
 		'%adjective%#%genre%',
 		'%adjective%#%region%#%genre%',
@@ -31,7 +32,8 @@ function patterns() {
 
 function generate_genre() {
 	$patterns = patterns();
-	$index = array_rand( $patterns );
+	$index    = array_rand( $patterns );
+
 	return concat_fragments( $patterns[ $index ] );
 }
 
@@ -45,9 +47,6 @@ function concat_fragments( $pattern ) {
 		switch ( $piece ) {
 			case '%prefix%':
 				$shards[ $i ] = replace_placeholders( 'prefix' );
-				break;
-			case '%genre%':
-				$shards[ $i ] = replace_placeholders( 'genre' ) . ' ';
 				break;
 			case '%adjective%':
 				$shards[ $i ] = replace_placeholders( 'adjective' ) . ' ';
@@ -65,11 +64,15 @@ function concat_fragments( $pattern ) {
 				$shards[ $i ] = replace_placeholders( 'instrument' );
 				break;
 			default:
-				$shards[ $i ] = $piece;
+				$fragment = str_replace( '%', '', $piece );
+				$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
+				$vector    = new $class_name();
+
+				$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
 				break;
 		}
 
-		$i++;
+		$i ++;
 	}
 
 	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
@@ -103,7 +106,7 @@ function concat_fragments( $pattern ) {
 }
 
 function replace_placeholders( $fragment ) {
-	return str_replace( "$fragment", call_user_func( __NAMESPACE__ . "\\Fragments\\get_$fragment" ), $fragment );
+
 }
 
 function get_genre() {
@@ -113,5 +116,6 @@ function get_genre() {
 function get_genre_story() {
 	$story_ideas = Storynator\story_ideas( get_genre() );
 	$index       = array_rand( $story_ideas );
+
 	return $story_ideas[ $index ];
 }
