@@ -51,7 +51,7 @@ function concat_fragments( $pattern ) {
 			$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
 		}
 
-		$i ++;
+		$i++;
 	}
 
 	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
