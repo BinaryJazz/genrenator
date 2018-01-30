@@ -64,12 +64,14 @@ function concat_fragments( $pattern ) {
 				$shards[ $i ] = replace_placeholders( 'instrument' );
 				break;
 			default:
-				$fragment = str_replace( '%', '', $piece );
-				$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
-				$vector    = new $class_name();
+				if ( in_array( $piece , FRAGMENT_PIECES ) ) {
+					$fragment   = str_replace( '%', '', $piece );
+					$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
+					$vector     = new $class_name();
 
-				$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
-				break;
+					$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
+					break;
+				}
 		}
 
 		$i ++;

@@ -16,7 +16,10 @@ require_once __DIR__ . '/inc/namespace.php';
 require_once __DIR__ . '/inc/genrenator.php';
 require_once __DIR__ . '/inc/storynator.php';
 
-
+const FRAGMENT_PIECES = [
+	'fragments',
+	'genre',
+];
 require_once __DIR__ . '/inc/fragments/fragments.php';
 require_once __DIR__ . '/inc/fragments/genre.php';
 
