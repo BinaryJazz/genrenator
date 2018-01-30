@@ -43,18 +43,15 @@ function concat_fragments( $pattern ) {
 	$i      = 0;
 	foreach ( $pieces as $piece ) {
 
-		switch ( $piece ) {
-			default:
-				$fragment   = str_replace( '%', '', $piece );
-				if ( in_array( $fragment, FRAGMENT_PIECES ) ) {
-					$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
-					$vector     = new $class_name();
+		$fragment = str_replace( '%', '', $piece );
+		if ( in_array( $fragment, FRAGMENT_PIECES ) ) {
+			$class_name = '\BinaryJazz\Genrenator\Fragments\\' . $fragment;
+			$vector     = new $class_name();
 
-					$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
-					break;
-				}
-				$shards [ $i ] = $piece;
+			$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
+			break;
 		}
+		$shards [ $i ] = $piece;
 
 		$i ++;
 	}
