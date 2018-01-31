@@ -49,6 +49,8 @@ function concat_fragments( $pattern ) {
 			$vector     = new $class_name();
 
 			$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
+		} else {
+			$shards [ $i ] = $piece;
 		}
 
 		$i++;
