@@ -18,6 +18,7 @@ class suffix extends fragments {
 		'core',
 		'step',
 		'coustica',
+		'o',
 		' road',
 		' music',
 		' gold',
@@ -33,6 +34,8 @@ class suffix extends fragments {
 		' storm',
 		' flow',
 		' français',
+		' gaucho',
+		' sonidera',
 	];
 
 	public function translatable_suffixes() {
