@@ -21,6 +21,7 @@ class instrument extends fragments {
 		'synth',
 		'bass',
 		'guitar',
+		'piano',
 	];
 
 	public function elements() {
