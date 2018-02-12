@@ -39,12 +39,14 @@ class adjective extends fragments {
 		// D.
 		'dad',
 		'dancy',
+		'death',
 		'deep',
 		'dirty',
 		'doo wop',
 		'dream',
 		'drone',
 		// E.
+		'early',
 		'easy',
 		'escape',
 		'ethereal',
@@ -79,16 +81,20 @@ class adjective extends fragments {
 		'jesus',
 		// K.
 		// L.
+		'liquid',
 		'lo-fi',
 		// M.
 		'mellow',
+		'melodic',
 		'minimal',
 		'modern',
+		'movie',
 		// N.
 		'nasty',
 		'new',
 		'ninja',
 		// O.
+		'operatic',
 		'orchestral',
 		'outlaw',
 		// P.
@@ -113,11 +119,13 @@ class adjective extends fragments {
 		'shiver',
 		'show',
 		'skate',
+		'sky',
 		'slow',
 		'smooth',
 		'speed',
 		'soft',
 		'southern',
+		'stoner',
 		'swirl',
 		// T.
 		'technical',
@@ -132,6 +140,7 @@ class adjective extends fragments {
 		'twee',
 		// U.
 		'underground',
+		'uplifting',
 		'urban',
 		// V.
 		'vapor',
