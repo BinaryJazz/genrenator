@@ -26,6 +26,13 @@ class prefix extends fragments {
 		'bro',
 		'proto',
 		'ether',
+		'dans',
+		'epi',
+		'micro',
+		'chill',
+		'zap',
+		'azonto',
+		'vapor',
 		// Adjectives.
 		'retro ',
 		'cat ',
