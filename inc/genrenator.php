@@ -27,6 +27,12 @@ function patterns() {
 		'%region%#%genre%',
 		'the #%beat%# of #%genre%',
 		'%instrument%# #%beat%',
+		'%adjective%#%adjective%#%genre%',
+		'%prefix%#%suffix%',
+		'%adjective%#%prefix%#%suffix%',
+		'%prefix%#%prefix%#%genre%',
+		'%adjective%#%region%#%genre%',
+		'%instrument%#%genre%',
 	];
 }
 
