@@ -22,6 +22,10 @@ class instrument extends fragments {
 		'bass',
 		'guitar',
 		'piano',
+		'harmonica',
+		'cello',
+		'ukilele',
+		'violin',
 	];
 
 	public function elements() {
