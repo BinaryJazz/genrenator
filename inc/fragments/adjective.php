@@ -13,6 +13,8 @@ class adjective extends fragments {
 		'aggressive',
 		'album',
 		'arena',
+		'art',
+		'artistic',
 		// B.
 		'baroque',
 		'bass',
@@ -22,13 +24,18 @@ class adjective extends fragments {
 		'black',
 		'blue eyed',
 		'bop',
+		'bow',
 		'bubble',
+		'bubblegum',
 		// C.
+		'candy',
 		'calming',
 		'chamber',
 		'christian',
 		'classic',
+		'compositional',
 		'contemporary',
+		'cool',
 		// D.
 		'dad',
 		'dancy',
@@ -38,49 +45,77 @@ class adjective extends fragments {
 		'dream',
 		'drone',
 		// E.
+		'easy',
+		'escape',
 		'ethereal',
 		'experimental',
 		// F.
 		'flutter',
+		'filter',
+		'folk',
+		'freak',
+		'funk',
+		'funky',
 		// G.
 		'gangster',
 		'garage',
 		'glam',
 		'gothic',
 		'grim',
+		'groove',
 		// H.
 		'happy',
 		'hard',
+		'hardcore',
 		'heavy',
 		'hip',
 		// I.
+		'idol',
 		'indie',
+		'industrial',
 		'intelligent',
 		// J.
+		'jam',
 		'jesus',
 		// K.
 		// L.
+		'lo-fi',
 		// M.
 		'mellow',
+		'minimal',
 		'modern',
 		// N.
 		'nasty',
 		'new',
+		'ninja',
 		// O.
 		'orchestral',
+		'outlaw',
 		// P.
 		'permanent',
+		'pop',
 		'pounding',
 		'power',
+		'progressive',
+		'psychadelic',
 		'pulsing',
 		// Q.
+		'quiet',
 		// R.
+		'reggaeton',
+		'regional',
 		'religious',
 		'rippling',
+		'riot',
+		'romantic',
 		'roots',
 		// S.
 		'shiver',
+		'show',
+		'skate',
+		'slow',
 		'smooth',
+		'speed',
 		'soft',
 		'southern',
 		'swirl',
@@ -99,6 +134,8 @@ class adjective extends fragments {
 		'underground',
 		'urban',
 		// V.
+		'vapor',
+		'video game',
 		'vintage',
 		'viral',
 		'vocal',
