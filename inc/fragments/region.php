@@ -7,6 +7,7 @@ class region extends fragments {
 
 	const REGIONS = [
 		// Prefixes.
+		'c-',
 		'k-',
 		'j-',
 		// Contractions.
@@ -26,6 +27,35 @@ class region extends fragments {
 		'florida ',
 		'swedish ',
 		'tibetan ',
+		'dirty south ',
+		'spanish ',
+		'tropical ',
+		'french ',
+		'german ',
+		'detroit ',
+		'hollywood ',
+		'british ',
+		'memphis ',
+		'argentine ',
+		'italian ',
+		'vegas ',
+		'dutch ',
+		'new jack ',
+		'korean ',
+		'chicago ',
+		'australian ',
+		'texas ',
+		'turkish ',
+		'nashville ',
+		'taiwanese ',
+		'danish ',
+		'brazilian ',
+		'irish ',
+		'chilean ',
+		'italian ',
+		'finnish ',
+		'brooklyn ',
+		'indonesian ',
 	];
 
 	public function elements() {
