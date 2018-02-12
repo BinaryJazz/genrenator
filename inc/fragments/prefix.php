@@ -5,10 +5,12 @@ namespace BinaryJazz\Genrenator\Fragments;
 class prefix extends fragments {
 
 	const PREFIXES = [
+		// Hyphenated.
 		'post-',
 		'folk-',
 		'fidget-',
 		'turbo-',
+		// Contractions.
 		'cyber',
 		'electro',
 		'synth',
@@ -17,6 +19,7 @@ class prefix extends fragments {
 		'neuro',
 		'dub',
 		'grind',
+		// Adjectives.
 		'retro ',
 		'cat ',
 		'neo ',
