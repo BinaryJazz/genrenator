@@ -28,7 +28,11 @@ class beat extends fragments {
 			sprintf( __( '%s sound', 'genrenator' ), $region->get_element() ),
 			// Translators: %s is a random region.
 			sprintf( __( '%sinvasion', 'genrenator' ), $region->get_element() ),
+			// Translators: %s is a random region.
+			sprintf( __( '%s scene', 'genrenator' ), $region->get_element() ),
 			sprintf( '%1$s %2$s', $adjective->get_element(), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s and bass', 'genrenator' ), $instrument->get_element() ),
 		];
 	}
 
