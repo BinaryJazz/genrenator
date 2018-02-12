@@ -10,6 +10,10 @@ class prefix extends fragments {
 		'folk-',
 		'fidget-',
 		'turbo-',
+		'blues-',
+		'dance-',
+		'psych-',
+		'anti-',
 		// Contractions.
 		'cyber',
 		'electro',
@@ -19,6 +23,9 @@ class prefix extends fragments {
 		'neuro',
 		'dub',
 		'grind',
+		'bro',
+		'proto',
+		'ether',
 		// Adjectives.
 		'retro ',
 		'cat ',
@@ -28,6 +35,9 @@ class prefix extends fragments {
 		'alt ',
 		'acid ',
 		'ambient ',
+		'emo ',
+		'anthem ',
+		'indie ',
 	];
 
 	private function translatable_prefixes() {
