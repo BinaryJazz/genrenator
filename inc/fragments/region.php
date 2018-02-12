@@ -6,14 +6,17 @@ namespace BinaryJazz\Genrenator\Fragments;
 class region extends fragments {
 
 	const REGIONS = [
-		'mexican ',
-		'latin ',
+		// Prefixes.
 		'k-',
 		'j-',
+		// Contractions.
+		'euro',
+		// Adjectives.
+		'mexican ',
+		'latin ',
 		'canadian ',
 		'uk ',
 		'southern ',
-		'euro',
 		'kraut ',
 		'viking ',
 		'world ',
