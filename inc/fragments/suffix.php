@@ -16,6 +16,8 @@ class suffix extends fragments {
 		'ism',
 		'bop',
 		'core',
+		'step',
+		'coustica',
 		' road',
 		' music',
 		' gold',
@@ -27,6 +29,10 @@ class suffix extends fragments {
 		' fusion',
 		' punk',
 		' holler',
+		' grrl',
+		' storm',
+		' flow',
+		' français',
 	];
 
 	public function translatable_suffixes() {
