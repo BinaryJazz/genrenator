@@ -69,22 +69,8 @@ function concat_fragments( $pattern ) {
 		$i++;
 	}
 
-	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
-
-	// No spaces before no-space suffixes or prefixes.
-	$shards = filter_spaces( $shards );
-
-	// Filter spaces before/after slashes.
-	if ( in_array( '/', $shards ) ) {
-		$string = str_replace( [ ' /', '/ ' ], '/', $string );
-	}
-
-	// Let's not have any accidental rapism.
-	if ( strpos( $string, 'rapism' ) ) {
-		$string = str_replace( 'rapism', 'rap', $string );
-	}
-
-	return $string;
+	// No spaces before no-space suffixes or prefixes and other fixes.
+	return filter_string( $shards, $string );
 }
 
 function get_genre() {
@@ -104,9 +90,11 @@ function get_genre_story() {
  * @since  0.2
  * @param  array $shards An array of fragment shards.
  * @todo                 Maybe rewrite this as an actual filter.
- * @return array         Filtered array of shards.
+ * @return string        Filtered string.
  */
-function filter_spaces( $shards ) {
+function filter_string( $shards ) {
+	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
+
 	$i = 0;
 	foreach ( $shards as $shard ) {
 		if ( in_array( $shard, Fragments\suffix::no_space_suffixes() ) || in_array( $shard, Fragments\prefix::no_space_prefixes() ) ) {
@@ -115,5 +103,15 @@ function filter_spaces( $shards ) {
 		$i++;
 	}
 
-	return $shards;
+	// Filter spaces before/after slashes.
+	if ( in_array( '/', $shards ) ) {
+		$string = str_replace( [ ' /', '/ ' ], '/', $string );
+	}
+
+	// Let's not have any accidental rapism.
+	if ( strpos( $string, 'rapism' ) ) {
+		$string = str_replace( 'rapism', 'rap', $string );
+	}
+
+	return $string;
 }
