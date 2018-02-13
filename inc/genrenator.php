@@ -33,6 +33,14 @@ function patterns() {
 		'%prefix%#%prefix%#%genre%',
 		'%adjective%#%region%#%genre%',
 		'%instrument%#%genre%',
+		'%region%#%suffix%',
+		'%genre%# #%instrument%',
+		'%adjective%#%suffix%#%suffix%',
+		'%genre%#%genre%',
+		'%region%#%instrument%',
+		'%region%#%instrument%#%suffix%',
+		'%adjective%#%instrument%#%suffix%',
+		'%adjective%#%instrument%',
 	];
 }
 
