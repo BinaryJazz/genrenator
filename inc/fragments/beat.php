@@ -15,6 +15,8 @@ class beat extends fragments {
 			// Translators: %s is a random adjective.
 			sprintf( __( '%s bass', 'genrenator' ), $adjective->get_element() ),
 			// Translators: %s is a random adjective.
+			sprintf( __( '%s tone', 'genrenator' ), $adjective->get_element() ),
+			// Translators: %s is a random adjective.
 			sprintf( __( '%s listening', 'genrenator' ), $adjective->get_element() ),
 			// Translators: %s is a random adjective.
 			sprintf( __( '%s band', 'genrenator' ), $adjective->get_element() ),
