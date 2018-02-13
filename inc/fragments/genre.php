@@ -184,6 +184,7 @@ class genre extends fragments {
 		'ska',
 		'sleep',
 		'sludge',
+		'song poem',
 		'soul',
 		'soundtrack',
 		'standards',
