@@ -12,7 +12,6 @@ namespace BinaryJazz\Genrenator;
 use BinaryJazz\Genrenator\Fragments;
 use BinaryJazz\Genrenator\Storynator;
 
-
 function patterns() {
 	return [
 		'%beat%# #%genre%',
@@ -64,7 +63,7 @@ function concat_fragments( $pattern ) {
 
 			$shards[ $i ] = str_replace( $fragment, $vector->texturize(), $fragment );
 		} else {
-			$shards [ $i ] = $piece;
+			$shards[ $i ] = $piece;
 		}
 
 		$i++;
