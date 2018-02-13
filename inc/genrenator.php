@@ -70,7 +70,7 @@ function concat_fragments( $pattern ) {
 	}
 
 	// No spaces before no-space suffixes or prefixes and other fixes.
-	return filter_string( $shards, $string );
+	return filter_string( $shards );
 }
 
 function get_genre() {
