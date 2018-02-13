@@ -106,4 +106,24 @@ class prefix extends fragments {
 		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
 	}
 
+	/**
+	 * Return an array of prefixes that don't have spaces.
+	 *
+	 * @since  0.2
+	 * @todo   If there's a better way to do this that's faster, it would be great to implement that.
+	 * @return array Prefixes that don't have spaces.
+	 */
+	public static function no_space_prefixes() {
+		$prefixes = self::PREFIXES;
+		$i = 0;
+		foreach ( $prefixes as $prefix ) {
+			if ( strpos( $prefix, ' ' ) ) {
+				unset( $prefixes[ $i ] );
+			}
+			$i++;
+		}
+
+		return $prefixes;
+	}
+
 }
