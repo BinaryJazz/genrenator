@@ -71,20 +71,8 @@ function concat_fragments( $pattern ) {
 
 	$string = str_replace( [ '- ', ' -' ], '-', implode( '', $shards ) );
 
-	// No space before 'ism'.
-	if ( in_array( 'ism', $shards ) ) {
-		$string = str_replace( ' ism', 'ism', $string );
-	}
-
-	// Also no space before 'timism'.
-	if ( in_array( 'timism', $shards ) ) {
-		$string = str_replace( ' timism', 'timism', $string );
-	}
-
-	// Also tronica.
-	if ( in_array( 'tronica', $shards ) ) {
-		$string = str_replace( ' tronica', 'tronica', $string );
-	}
+	// No spaces before no-space suffixes or prefixes.
+	$shards = filter_spaces( $shards );
 
 	// Filter spaces before/after slashes.
 	if ( in_array( '/', $shards ) ) {
