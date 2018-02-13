@@ -109,3 +109,23 @@ function get_genre_story() {
 
 	return $story_ideas[ $index ];
 }
+
+/**
+ * Remove spaces from things that shouldn't have spaces.
+ *
+ * @since  0.2
+ * @param  array $shards An array of fragment shards.
+ * @todo                 Maybe rewrite this as an actual filter.
+ * @return array         Filtered array of shards.
+ */
+function filter_spaces( $shards ) {
+	$i = 0;
+	foreach ( $shards as $shard ) {
+		if ( in_array( $shard, Fragments\suffix::no_space_suffixes() ) || in_array( $shard, Fragments\prefix::no_space_prefixes() ) ) {
+			$shards[ $i ] = trim( $shard );
+		}
+		$i++;
+	}
+
+	return $shards;
+}
