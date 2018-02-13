@@ -26,6 +26,20 @@ class instrument extends fragments {
 		'cello',
 		'ukilele',
 		'violin',
+		'didgeridoo',
+		'mallet',
+		'timpani',
+		'kodo drum',
+		'harpsichord',
+		'panpipe',
+		'wind',
+		'harp',
+		'brass',
+		'pipe',
+		'accordion',
+		'organ',
+		'clarinet',
+		'saxophone',
 	];
 
 	public function elements() {
