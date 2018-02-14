@@ -16,6 +16,7 @@ namespace BinaryJazz\Genrenator;
 require_once __DIR__ . '/inc/namespace.php';
 require_once __DIR__ . '/inc/genrenator.php';
 require_once __DIR__ . '/inc/storynator.php';
+require_once __DIR__ . '/inc/api.php';
 
 const FRAGMENT_PIECES = [
 	'fragments',
