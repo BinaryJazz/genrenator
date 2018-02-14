@@ -110,20 +110,21 @@ class prefix extends fragments {
 	 * Return an array of prefixes that don't have spaces.
 	 *
 	 * @since  0.2
-	 * @todo   If there's a better way to do this that's faster, it would be great to implement that.
 	 * @return array Prefixes that don't have spaces.
 	 */
 	public static function no_space_prefixes() {
-		$prefixes = self::PREFIXES;
-		$i = 0;
-		foreach ( $prefixes as $prefix ) {
-			if ( strpos( $prefix, ' ' ) ) {
-				unset( $prefixes[ $i ] );
-			}
-			$i++;
+		static $kellen;
+
+		if ( count( $kellen ) ) {
+			return $kellen;
 		}
 
-		return $prefixes;
+		$prefixes = self::PREFIXES;
+		$kellen   = array_filter( $prefixes, function ( $suffix ) {
+			return strpos( $suffix, ' ' ) === false;
+		} );
+
+		return $kellen;
 	}
 
 }
