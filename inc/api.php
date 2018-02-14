@@ -79,6 +79,13 @@ function get_genre_api( $data ) {
 	return $genres;
 }
 
+/**
+ * Returns multiple stories when a number is passed to the endpoint.
+ *
+ * @since  0.3
+ * @param  array $data Array of query arguments.
+ * @return array       Array of data to pass to the REST endpoint.
+ */
 function get_genre_story_api( $data ) {
 	$count = absint( $data['count'] );
 

@@ -31,6 +31,13 @@ function shortcode_story() {
 	return Storynator\generate_story();
 }
 
+/**
+ * In an array of "things", get a random "thing".
+ *
+ * @since  0.1
+ * @param  array $things An array of things.
+ * @return string        A single thing in that array.
+ */
 function get_thing( $things ) {
 	$index = array_rand( $things );
 	return $things[ $index ];
