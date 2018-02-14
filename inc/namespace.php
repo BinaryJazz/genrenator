@@ -31,7 +31,31 @@ function shortcode_story() {
 	return Storynator\generate_story();
 }
 
+/**
+ * In an array of "things", get a random "thing".
+ *
+ * @since  0.1
+ * @param  array $things An array of things.
+ * @return string        A single thing in that array.
+ */
 function get_thing( $things ) {
 	$index = array_rand( $things );
 	return $things[ $index ];
+}
+
+/**
+ * Removes extra spaces from a string.
+ *
+ * @since  0.3
+ * @param  string $string The string to filter.
+ * @return string         The string without extra spaces.
+ */
+function filter_extra_spaces( $string ) {
+	// Replace double spaces with a single space, if there are any.
+	if ( strpos( $string, '  ' ) ) {
+		$string = str_replace( '  ', ' ', $string );
+	}
+
+	// Also trim off any extra spaces at the beginning/end of the string.
+	return trim( $string );
 }
