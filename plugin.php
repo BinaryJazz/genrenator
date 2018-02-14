@@ -3,7 +3,7 @@
  * Plugin Name: Binary Jazz Genrenator
  * Plugin URI: https://binaryjazz.us
  * Description: Random genre creation API.
- * Version: 0.1
+ * Version: 0.2
  * Author: The folks at Binary Jazz
  * Author URI: https://binaryjazz.us
  * License: GPLv3

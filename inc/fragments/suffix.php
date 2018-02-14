@@ -16,6 +16,29 @@ class suffix extends fragments {
 		'ism',
 		'bop',
 		'core',
+		'step',
+		'coustica',
+		'o',
+		'style',
+		'work',
+		'haus',
+		'musik',
+		'vision',
+		'tech',
+		'grind',
+		'tune',
+		'ia',
+		'down',
+		'punk',
+		' star',
+		' trip',
+		' polo',
+		' whittle',
+		' house',
+		' party',
+		' steady',
+		' chileno',
+		' chill',
 		' road',
 		' music',
 		' gold',
@@ -27,6 +50,24 @@ class suffix extends fragments {
 		' fusion',
 		' punk',
 		' holler',
+		' reel',
+		' remix',
+		' product',
+		' grrl',
+		' storm',
+		' flow',
+		' français',
+		' gaucho',
+		' sonidera',
+		' urbano',
+		' international',
+		' trio',
+		' quartet',
+		' quintet',
+		' sextet',
+		' napoletana',
+		' revival',
+		' catala',
 	];
 
 	public function translatable_suffixes() {
@@ -42,5 +83,25 @@ class suffix extends fragments {
 
 	public function elements() {
 		return array_merge( self::SUFFIXES, $this->translatable_suffixes());
+	}
+
+	/**
+	 * Return an array of suffixes that don't have spaces.
+	 *
+	 * @since  0.2
+	 * @todo   If there's a better way to do this that's faster, it would be great to implement that.
+	 * @return array Array of suffixes that don't have spaces.
+	 */
+	public static function no_space_suffixes() {
+		$suffixes = self::SUFFIXES;
+		$i = 0;
+		foreach ( $suffixes as $suffix ) {
+			if ( strpos( $suffix, ' ' ) ) {
+				unset( $suffixes[ $i ] );
+			}
+			$i++;
+		}
+
+		return $suffixes;
 	}
 }
