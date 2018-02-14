@@ -3,7 +3,7 @@
  * Plugin Name: Binary Jazz Genrenator
  * Plugin URI: https://binaryjazz.us
  * Description: Random genre creation API.
- * Version: 0.2
+ * Version: 1.0
  * Author: The folks at Binary Jazz
  * Author URI: https://binaryjazz.us
  * License: GPLv3
@@ -16,6 +16,7 @@ namespace BinaryJazz\Genrenator;
 require_once __DIR__ . '/inc/namespace.php';
 require_once __DIR__ . '/inc/genrenator.php';
 require_once __DIR__ . '/inc/storynator.php';
+require_once __DIR__ . '/inc/api.php';
 
 const FRAGMENT_PIECES = [
 	'fragments',

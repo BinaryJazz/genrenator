@@ -1,7 +1,7 @@
 # Genrenator #
 **Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)  
 **Description:**       Random genre creation API.  
-**Stable tag:**        0.2  
+**Stable tag:**        1.0  
 **License:**           GPLv3  
 **License URI:**       http://www.gnu.org/licenses/gpl-3.0.html  
 
@@ -37,6 +37,12 @@ Right now, the easiest way to contribute is by helping us expand and organize th
 2. Activate Genrenator through the 'Plugins' menu in WordPress.
 
 ## Changelog ##
+
+### 1.0 ###
+* first major release.
+
+### 0.3 ###
+* added API endpoints for genres and stories.
 
 ### 0.2 ###
 * Converted fragment lists into abstract classes for better extensability. 

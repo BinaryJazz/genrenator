@@ -15,9 +15,12 @@ use BinaryJazz\Genrenator\Storynator;
  * Registers actions and filter required to run the plugin.
  */
 function bootstrap() {
-	// Add all your plugin hooks here.
+	// Shortcodes.
 	add_shortcode( 'genrenator-genre', __NAMESPACE__ . '\\shortcode_genre' );
 	add_shortcode( 'genrenator-story', __NAMESPACE__ . '\\shortcode_story' );
+
+	// API.
+	add_action( 'rest_api_init', __NAMESPACE__ . '\\API\\register_routes' );
 }
 
 function shortcode_genre() {
