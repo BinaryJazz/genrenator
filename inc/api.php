@@ -73,7 +73,7 @@ function get_genre_api( $data ) {
 	$genres = [];
 
 	for ( $i = 0; $i < $count; $i++ ) {
-		$genres[ $i ] = filter_extra_spaces( Genrenator\get_genre() );
+		$genres[ $i ] = Genrenator\get_genre();
 	}
 
 	return $genres;
@@ -96,7 +96,7 @@ function get_genre_story_api( $data ) {
 	$stories = [];
 
 	for ( $i = 0; $i < $count; $i++ ) {
-		$stories[ $i ] = filter_extra_spaces( Storynator\generate_story() );
+		$stories[ $i ] = Storynator\generate_story();
 	}
 
 	return $stories;

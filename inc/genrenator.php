@@ -74,7 +74,7 @@ function concat_fragments( $pattern ) {
 }
 
 function get_genre() {
-	return generate_genre();
+	return filter_extra_spaces( generate_genre() );
 }
 
 function get_genre_story() {
