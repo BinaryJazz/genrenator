@@ -12,6 +12,12 @@ namespace BinaryJazz\Genrenator;
 use BinaryJazz\Genrenator\Fragments;
 use BinaryJazz\Genrenator\Storynator;
 
+/**
+ * An array of genre patterns for building new genres.
+ *
+ * @since  0.1
+ * @return array Array of patterns.
+ */
 function patterns() {
 	return [
 		'%beat%# #%genre%',
@@ -43,6 +49,12 @@ function patterns() {
 	];
 }
 
+/**
+ * Builds a random genre.
+ *
+ * @since  0.1
+ * @return string A single randomized genre string.
+ */
 function generate_genre() {
 	$patterns = patterns();
 	$index    = array_rand( $patterns );
@@ -50,6 +62,14 @@ function generate_genre() {
 	return concat_fragments( $patterns[ $index ] );
 }
 
+/**
+ * Get and combine the pieces (fragments) of a genre pattern based on the components of the pattern.
+ *
+ * @since  0.1
+ * @see    patterns()
+ * @param  string $pattern A single pattern.
+ * @return string          A single, randomized genre based on the pattern that was passed.
+ */
 function concat_fragments( $pattern ) {
 	$pieces = explode( '#', $pattern );
 	$shards = [];
@@ -73,10 +93,24 @@ function concat_fragments( $pattern ) {
 	return filter_string( $shards );
 }
 
+/**
+ * Return a single genre.
+ *
+ * @since  0.1
+ * @return string A random genre.
+ */
 function get_genre() {
 	return filter_extra_spaces( generate_genre() );
 }
 
+/**
+ * Gets a random _pattern_ for a genre story.
+ *
+ * This does not get the actual story.
+ *
+ * @see           Storynator\generate_story
+ * @return string Story pattern from which to generate a story.
+ */
 function get_genre_story() {
 	$story_ideas = Storynator\story_ideas( get_genre() );
 	$index       = array_rand( $story_ideas );

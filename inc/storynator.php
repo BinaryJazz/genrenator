@@ -11,6 +11,12 @@ namespace BinaryJazz\Genrenator\Storynator;
 
 use BinaryJazz\Genrenator;
 
+/**
+ * An array of story ideas to build stories from.
+ *
+ * @since  0.1
+ * @return array Array of stories.
+ */
 function story_ideas() {
 	return [
 		// Prompts.
@@ -34,12 +40,25 @@ function story_ideas() {
 	];
 }
 
+/**
+ * Generate a random story.
+ *
+ * @since  0.1
+ * @return string A generated story.
+ */
 function generate_story() {
 	$story = Genrenator\get_thing( story_ideas() );
 	$genre = Genrenator\generate_genre();
 	return Genrenator\filter_extra_spaces( ucfirst( filter_punctuation( sprintf( $story, $genre ) ) ) );
 }
 
+/**
+ * Prevents spaces appearing before punctuation at the ends of sentences.
+ *
+ * @since  0.1
+ * @param  string $string The original string.
+ * @return string         The string with extra spaces filtered out.
+ */
 function filter_punctuation( $string ) {
 	// Filter out spaces before periods.
 	$string = str_replace( ' .', '.', $string );

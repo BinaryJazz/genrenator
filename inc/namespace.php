@@ -23,10 +23,22 @@ function bootstrap() {
 	add_action( 'rest_api_init', __NAMESPACE__ . '\\API\\register_routes' );
 }
 
+/**
+ * Callback for genre shortcode.
+ *
+ * @since  0.1
+ * @return string A single genre.
+ */
 function shortcode_genre() {
 	return generate_genre();
 }
 
+/**
+ * Callback for genre-story shortcode.
+ *
+ * @since  0.1
+ * @return string A single genre story.
+ */
 function shortcode_story() {
 	return Storynator\generate_story();
 }
