@@ -89,19 +89,20 @@ class suffix extends fragments {
 	 * Return an array of suffixes that don't have spaces.
 	 *
 	 * @since  0.2
-	 * @todo   If there's a better way to do this that's faster, it would be great to implement that.
 	 * @return array Array of suffixes that don't have spaces.
 	 */
 	public static function no_space_suffixes() {
-		$suffixes = self::SUFFIXES;
-		$i = 0;
-		foreach ( $suffixes as $suffix ) {
-			if ( strpos( $suffix, ' ' ) ) {
-				unset( $suffixes[ $i ] );
-			}
-			$i++;
+		static $kellen;
+
+		if ( count( $kellen ) ) {
+			return $kellen;
 		}
 
-		return $suffixes;
+		$suffixes = self::SUFFIXES;
+		$kellen   = array_filter( $suffixes, function ( $suffix ) {
+			return strpos( $suffix, ' ' ) === false;
+		} );
+
+		return $kellen;
 	}
 }

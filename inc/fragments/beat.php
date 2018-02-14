@@ -11,6 +11,8 @@ class beat extends fragments {
 		$region     = new region();
 		return [
 			// Translators: %s is a random adjective.
+			sprintf( __( 'deep %s', 'genrenator' ), $adjective->get_element() ),
+			// Translators: %s is a random adjective.
 			sprintf( __( '%s beat', 'genrenator' ), $adjective->get_element() ),
 			// Translators: %s is a random adjective.
 			sprintf( __( '%s bass', 'genrenator' ), $adjective->get_element() ),
