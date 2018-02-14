@@ -101,21 +101,3 @@ function get_genre_story_api( $data ) {
 
 	return $stories;
 }
-
-/**
- * Removes extra spaces from a string.
- *
- * @since  0.3
- * @todo                  I feel like we're doing this a couple different places so maybe make one generic function for this.
- * @param  string $string The string to filter.
- * @return string         The string without extra spaces.
- */
-function filter_extra_spaces( $string ) {
-	// Replace double spaces with a single space, if there are any.
-	if ( strpos( $string, '  ' ) ) {
-		$string = str_replace( '  ', ' ', $string );
-	}
-
-	// Also trim off any extra spaces at the beginning/end of the string.
-	return trim( $string );
-}
