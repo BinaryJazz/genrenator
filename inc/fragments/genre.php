@@ -226,9 +226,4 @@ class genre extends fragments {
 
 		return self::GENRES_MAIN;
 	}
-
-	public function texturize() {
-		return parent::texturize() . ' ';
-	}
-
 }
