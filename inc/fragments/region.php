@@ -173,6 +173,21 @@ class region extends fragments {
 	}
 
 	public function texturize() {
+		// If the region element shouldn't have a space after it, don't add one.
+		if ( in_array( parent::texturize(), [
+			// Prefixes.
+			'c-',
+			'k-',
+			'j-',
+			// Contractions.
+			'afro',
+			'aussie',
+			'austro',
+			'euro',
+		] ) ) {
+			return parent::texturize();
+		}
+
 		return parent::texturize() . ' ';
 	}
 }
