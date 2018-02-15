@@ -219,8 +219,8 @@ class genre extends fragments {
 	];
 
 	public function elements() {
-		// 1 in 3 genres is a secondary, more obscure genre.
-		if ( 1 === rand( 1, 3 ) ) {
+		// 1 in 5 genres is a secondary, more obscure genre.
+		if ( 1 === rand( 1, 5 ) ) {
 			return self::GENRES_SECONDARY;
 		}
 
