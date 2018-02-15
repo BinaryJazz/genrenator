@@ -41,7 +41,7 @@ function patterns() {
 		'%region%#%suffix%',
 		'%genre%# #%instrument%',
 		'%adjective%#%suffix%#%suffix%',
-		'%genre%#%genre%',
+		'%genre%# #%genre%',
 		'%region%#%instrument%',
 		'%region%#%instrument%#%suffix%',
 		'%adjective%#%instrument%#%suffix%',
