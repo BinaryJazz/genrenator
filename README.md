@@ -21,13 +21,14 @@ Right now you can install this on your WordPress site and use one of the two bui
 We used [Every Noise At Once](http://everynoise.com/everynoise1d.cgi?scope=all) as a base to take parts of genres from, then created internal catalogs of each genre "fragment". These catalogs are broken into `instruments`, `beats`, `adjectives`, `prefixes` and `suffixes`, `regions`, and `genres`. We also used Every Noise to inform our list of `patterns` which are used to combine the above fragments in unique ways.
 
 ## What's next for Genrenator? ##
-The next step is building out API endpoints so Genrenator can be an API used by anyone. We plan on having endpoints for each of the options (story and genre) and may make it so multiple genres can be returned on request.
+We've built API endpoints so Genrenator can be an API used by anyone. Documentation for the API is available at [BinaryJazz.us](https://binaryjazz.us/genrenator-api). 
 
-After that, there's been discussion about extending the API into a lorem ipsum generator that generates randomized music reviews.
+There's been discussion and some amount of planning about extending the API into a lorem ipsum generator that generates randomized music reviews. Before that, though, we'd like to be able to link to and share genres (see [issue #11](https://github.com/BinaryJazz/genrenator/issues/11)).
 
 ## This is awesome, how can I contribute to Genrenator? ##
 Right now, the easiest way to contribute is by helping us expand and organize the list of words/phrases for genre "fragments" (the pieces that are combined to create new genres). This includes instruments, genres, adjectives, etc. We could also use more "stories". If you're ambitious, you can submit a PR and we'll be happy to review and merge it if it looks good, or provide feedback. We're sorely lacking in documentation for most functions because much of Genrenator was written in a hurry -- writing inline documentation and docblocks would be greatlly appreciated, too!
 
+Testing the plugin locally (or via the API) is a lot of help in identifying bugs, and we're always interested in anyone who wants to help squash bugs. 😁
 
 ## Installation ##
 
