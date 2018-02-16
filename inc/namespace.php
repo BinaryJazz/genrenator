@@ -90,8 +90,14 @@ function get_sanitized_query_param( $context = '' ) {
 }
 
 function get_twitter_button( $string, $url, $type ) {
+	$text         = ( 'genre' === $type ) ? str_replace( '&', '%26', Storynator\generate_story( $string ) ) : $string;
 	$encoded_text = urlencode( esc_html( $text ) );
-	$encoded_url = urlencode( esc_url_raw( $url . '?story=' . $encoded_text ) );
+
+	if ( 'genre' === $type ) {
+		$encoded_url = urlencode( esc_url_raw( "$url?genre=$text" ) );
+	} else {
+		$encoded_url = urlencode( esc_url_raw( "$url?story=$encoded_text" ) );
+	}
 
 	ob_start();
 	?>
