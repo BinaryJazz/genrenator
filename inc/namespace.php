@@ -90,8 +90,9 @@ function get_sanitized_query_param( $context = '' ) {
 }
 
 function get_twitter_button( $text, $url ) {
-	$encoded_url = urlencode( esc_url_raw( $url ) );
 	$encoded_text = urlencode( esc_html( $text ) );
+	$encoded_url = urlencode( esc_url_raw( $url . '?story=' . $encoded_text ) );
+
 	ob_start();
 	?>
 	<div class="genrenator-twitter-embed">
