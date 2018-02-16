@@ -60,6 +60,7 @@ function shortcode_story() {
 /**
  * Check if a query param (either ?story= or ?genre= respectively) exists. Return the relevant context or all.
  *
+ * @since  1.1
  * @param  string $context The relevant context (either genre or story).
  * @return mixed           An array that includes story and genre if no context is passed. If a context is passed, return that content as a string.
  */
@@ -79,6 +80,21 @@ function get_sanitized_query_param( $context = '' ) {
 	}
 
 	return $query[ $context ];
+}
+
+function get_twitter_button( $text, $url ) {
+	$encoded_url = urlencode( esc_url_raw( $url ) );
+	$encoded_text = urlencode( esc_html( $text ) );
+	ob_start(); ?>
+	<iframe
+	  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=<?php echo esc_textarea( $encoded_url ); ?>&via=BinaryJazz&text=<?php echo esc_textarea( $encoded_text ); ?>"
+	  width="140"
+	  height="28"
+	  title="Twitter Tweet Button"
+	  style="border: 0; overflow: hidden;">
+	</iframe>
+	<?php
+	return ob_get_clean();
 }
 
 /**
