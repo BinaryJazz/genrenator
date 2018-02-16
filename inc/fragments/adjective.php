@@ -254,7 +254,7 @@ class adjective extends fragments {
 	}
 
 	public function texturize() {
-		return parent::texturize() . ' ';
+		return ' ' . parent::texturize() . ' ';
 	}
 
 }
