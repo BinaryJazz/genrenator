@@ -30,6 +30,13 @@ function bootstrap() {
  * @return string A single genre.
  */
 function shortcode_genre() {
+	// Get a genre from the URL if it exists.
+	$genre = get_sanitized_query_param( 'genre' );
+	if ( $genre ) {
+		return $genre;
+	}
+
+	// Return a random genre.
 	return generate_genre();
 }
 
@@ -40,6 +47,13 @@ function shortcode_genre() {
  * @return string A single genre story.
  */
 function shortcode_story() {
+	// Get a story from the URL if it exists.
+	$story = get_sanitized_query_param( 'story' );
+	if ( $story ) {
+		return str_replace( '+', ' ', $story );
+	}
+
+	// Return a random story.
 	return Storynator\generate_story();
 }
 
