@@ -55,13 +55,20 @@ function shortcode_genre() {
  */
 function shortcode_story() {
 	// Get a story from the URL if it exists.
-	$story = get_sanitized_query_param( 'story' );
-	if ( $story ) {
-		return str_replace( '+', ' ', $story );
-	}
+	$requested_story = get_sanitized_query_param( 'story' );
 
-	// Return a random story.
-	return Storynator\generate_story();
+	$story = ( $requested_story ) ?: Storynator\generate_story();
+
+	$tweet_button = get_twitter_button( $story, get_permalink( get_the_ID() ), 'story' );
+
+	ob_start();
+	?>
+	<p class="genrenator-story">
+		<?php echo esc_html( $story ); ?>
+	</p>
+	<?php
+	$story_html = ob_get_clean();
+	return $story_html . $tweet_button;
 }
 
 /**
