@@ -44,11 +44,12 @@ function story_ideas() {
  * Generate a random story.
  *
  * @since  0.1
- * @return string A generated story.
+ * @param  string $genre A passed genre. Allows you to create a story for a specified genre. Defaults to a random genre.
+ * @return string        A generated story.
  */
-function generate_story() {
+function generate_story( $genre = '' ) {
 	$story = Genrenator\get_thing( story_ideas() );
-	$genre = Genrenator\generate_genre();
+	$genre = ( '' !== $genre ) ?: Genrenator\generate_genre();
 	return Genrenator\filter_extra_spaces( ucfirst( filter_punctuation( sprintf( $story, $genre ) ) ) );
 }
 
