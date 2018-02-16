@@ -89,7 +89,7 @@ function get_sanitized_query_param( $context = '' ) {
 	return $query[ $context ];
 }
 
-function get_twitter_button( $text, $url ) {
+function get_twitter_button( $string, $url, $type ) {
 	$encoded_text = urlencode( esc_html( $text ) );
 	$encoded_url = urlencode( esc_url_raw( $url . '?story=' . $encoded_text ) );
 
