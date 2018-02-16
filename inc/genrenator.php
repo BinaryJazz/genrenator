@@ -142,10 +142,10 @@ function filter_string( $shards ) {
 		$string = str_replace( [ ' /', '/ ' ], '/', $string );
 	}
 
-	// Let's not have any accidental rapism.
-	if ( strpos( $string, 'rapism' ) ) {
-		$string = str_replace( 'rapism', 'rap', $string );
+	// Let's not have any accidental rapism or rapia.
+	if ( strpos( $string, 'rapism' ) || strpos( $string, 'rapia' ) ) {
+		$string = str_replace( [ 'rapism', 'rapia' ], 'rap', $string );
 	}
 
-	return $string;
+	return filter_extra_spaces( $string );
 }
