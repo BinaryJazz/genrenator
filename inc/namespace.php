@@ -44,6 +44,30 @@ function shortcode_story() {
 }
 
 /**
+ * Check if a query param (either ?story= or ?genre= respectively) exists. Return the relevant context or all.
+ *
+ * @param  string $context The relevant context (either genre or story).
+ * @return mixed           An array that includes story and genre if no context is passed. If a context is passed, return that content as a string.
+ */
+function get_sanitized_query_param( $context = '' ) {
+	if ( ! isset( $_GET['story'] ) && ! isset( $_GET['genre'] ) ) {
+		return false;
+	}
+
+	$query = [
+		'story' => isset( $_GET['story'] ) ? sanitize_text_field( wp_unslash( $_GET['story'] ) ) : false,
+		'genre' => isset( $_GET['genre'] ) ? sanitize_text_field( wp_unslash( $_GET['genre'] ) ) : false,
+	];
+
+	// If no context was passed or the context is neither a story nor a genre return everything.
+	if ( '' === $context || ! in_array( $context, [ 'genre', 'story' ] ) ) {
+		return $query;
+	}
+
+	return $query[ $context ];
+}
+
+/**
  * In an array of "things", get a random "thing".
  *
  * @since  0.1
