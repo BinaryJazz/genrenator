@@ -103,7 +103,7 @@ function get_twitter_button( $string, $url, $type ) {
 	?>
 	<div class="genrenator-twitter-embed">
 		<iframe
-		  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=<?php echo esc_textarea( $encoded_url ); ?>&via=BinaryJazz&text=<?php echo esc_textarea( str_replace( '&', '%26', $text ) ); ?>%C2%A0"
+		  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=<?php echo esc_textarea( $encoded_url ); ?>&via=BinaryJazz&text=<?php echo esc_textarea( $text ); ?>%C2%A0"
 		  width="140"
 		  height="28"
 		  title="Twitter Tweet Button"
