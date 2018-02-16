@@ -92,14 +92,17 @@ function get_sanitized_query_param( $context = '' ) {
 function get_twitter_button( $text, $url ) {
 	$encoded_url = urlencode( esc_url_raw( $url ) );
 	$encoded_text = urlencode( esc_html( $text ) );
-	ob_start(); ?>
-	<iframe
-	  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=<?php echo esc_textarea( $encoded_url ); ?>&via=BinaryJazz&text=<?php echo esc_textarea( $encoded_text ); ?>"
-	  width="140"
-	  height="28"
-	  title="Twitter Tweet Button"
-	  style="border: 0; overflow: hidden;">
-	</iframe>
+	ob_start();
+	?>
+	<div class="genrenator-twitter-embed">
+		<iframe
+		  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=<?php echo esc_textarea( $encoded_url ); ?>&via=BinaryJazz&text=<?php echo esc_textarea( str_replace( '&', '%26', $text ) ); ?>%C2%A0"
+		  width="140"
+		  height="28"
+		  title="Twitter Tweet Button"
+		  style="border: 0; overflow: hidden;">
+		</iframe>
+	</div>
 	<?php
 	return ob_get_clean();
 }
