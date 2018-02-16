@@ -49,7 +49,7 @@ function story_ideas() {
  */
 function generate_story( $genre = '' ) {
 	$story = Genrenator\get_thing( story_ideas() );
-	$genre = ( '' !== $genre ) ?: Genrenator\generate_genre();
+	$genre = ( ! $genre ) ? Genrenator\generate_genre() : $genre;
 	return Genrenator\filter_extra_spaces( ucfirst( filter_punctuation( sprintf( $story, $genre ) ) ) );
 }
 
