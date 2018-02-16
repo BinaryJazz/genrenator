@@ -95,6 +95,15 @@ function get_sanitized_query_param( $context = '' ) {
 	return $query[ $context ];
 }
 
+/**
+ * Return a custom Tweet button.
+ *
+ * @since  1.1
+ * @param  string $string The string (either a story or a genre) that we're tweeting a link to.
+ * @param  string $url    The URL that we're linking the tweet to.
+ * @param  string $type   The type of thing we're tweeting (either genre or story).
+ * @return string         The HTML for the Tweet button.
+ */
 function get_twitter_button( $string, $url, $type ) {
 	$text         = ( 'genre' === $type ) ? str_replace( '&', '%26', Storynator\generate_story( $string ) ) : $string;
 	$encoded_text = urlencode( esc_html( $text ) );
