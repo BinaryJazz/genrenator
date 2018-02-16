@@ -6,7 +6,7 @@
 **License URI:**       http://www.gnu.org/licenses/gpl-3.0.html  
 
 ## What is this thing? ##
-Genrenator is a random genre creation engine (and soon-to-be API) for all your genre-creation needs. Remember that time when you were really into west coast soultronica? Or when you were trying to name the genre to the music you were listening to and didn't realize that it was neo ambient punk? Or maybe you wanted to recall the road trip when you listened to way too much uk indie dirt? That's what the **Genrenator** is for.
+Genrenator is a random genre creation engine and API for all your genre-creation needs. Remember that time when you were really into west coast soultronica? Or when you were trying to name the genre to the music you were listening to and didn't realize that it was neo ambient punk? Or maybe you wanted to recall the road trip when you listened to way too much uk indie dirt? That's what the **Genrenator** is for.
 
 ## How do I use it? ##
 Right now you can install this on your WordPress site and use one of the two built-in shortcodes.
@@ -16,6 +16,8 @@ Right now you can install this on your WordPress site and use one of the two bui
 
 `[genrenator-story]` will give you a story/memory associated with a genre.  
 [Demo](https://binaryjazz.us/genrenator-story/)
+
+You can also access the [public Genrenator API](https://binaryjazz.us/wp-json/genrenator/v1/) on Binary Jazz. (See [documentation](https://binaryjazz.us/genrenator-api).)
 
 ## Where do these terms/phrases come from? ##
 We used [Every Noise At Once](http://everynoise.com/everynoise1d.cgi?scope=all) as a base to take parts of genres from, then created internal catalogs of each genre "fragment". These catalogs are broken into `instruments`, `beats`, `adjectives`, `prefixes` and `suffixes`, `regions`, and `genres`. We also used Every Noise to inform our list of `patterns` which are used to combine the above fragments in unique ways.
