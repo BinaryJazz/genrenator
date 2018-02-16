@@ -31,10 +31,9 @@ function bootstrap() {
  */
 function shortcode_genre() {
 	// Get a genre from the URL if it exists.
-	$genre = get_sanitized_query_param( 'genre' );
-	if ( $genre ) {
-		return $genre;
-	}
+	$requested_genre = get_sanitized_query_param( 'genre' );
+
+	$genre = ( $requested_genre ) ?: generate_genre();
 
 	// Return a random genre.
 	return generate_genre();
