@@ -69,19 +69,19 @@ class prefix extends fragments {
 		'volks',
 		'zap',
 		// Adjectives.
-		'acid ',
-		'alt ',
-		'ambient ',
-		'anthem ',
-		'cat ',
-		'death ',
-		'dwn ',
-		'emo ',
-		'indie ',
-		'neo ',
-		'nu ',
-		'retro ',
-		'trad ',
+		'acid',
+		'alt',
+		'ambient',
+		'anthem',
+		'cat',
+		'death',
+		'dwn',
+		'emo',
+		'indie',
+		'neo',
+		'nu',
+		'retro',
+		'trad',
 	];
 
 	private function translatable_prefixes() {
@@ -104,6 +104,28 @@ class prefix extends fragments {
 
 	public function elements() {
 		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
+	}
+
+	public function texturize() {
+		if ( in_array( parent::texturize(), [
+			'acid',
+			'alt',
+			'ambient',
+			'anthem',
+			'cat',
+			'death',
+			'dwn',
+			'emo',
+			'indie',
+			'neo',
+			'nu',
+			'retro',
+			'trad',
+		] ) ) {
+			return parent::texturize() . ' ';
+		}
+
+		return parent::texturize();
 	}
 
 	/**
