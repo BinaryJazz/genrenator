@@ -34,9 +34,9 @@ function shortcode_genre() {
 	$requested_genre = get_sanitized_query_param( 'genre' );
 
 	$genre = ( $requested_genre ) ?: generate_genre();
+	$story = Storynator\generate_story( $genre );
 
-	// Return a random genre.
-	return generate_genre();
+	$tweet_button = get_twitter_button( $story, get_permalink( get_the_ID() ) );
 }
 
 /**
