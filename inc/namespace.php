@@ -37,6 +37,14 @@ function shortcode_genre() {
 	$story = Storynator\generate_story( $genre );
 
 	$tweet_button = get_twitter_button( $story, get_permalink( get_the_ID() ) );
+
+	ob_start(); ?>
+	<p class="genrenator-genre">
+		<?php echo esc_html( $genre ); ?>
+	</p>
+	<?php
+	$genre_html = ob_get_clean();
+	return $genre_html . $tweet_button;
 }
 
 /**
