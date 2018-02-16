@@ -142,8 +142,8 @@ class prefix extends fragments {
 		}
 
 		$prefixes = self::PREFIXES;
-		$kellen   = array_filter( $prefixes, function ( $suffix ) {
-			return strpos( $suffix, ' ' ) === false;
+		$kellen   = array_filter( $prefixes, function ( $prefix ) {
+			return strpos( $prefix, ' ' ) === false;
 		} );
 
 		return $kellen;
