@@ -24,7 +24,7 @@ class instrument extends fragments {
 		'piano',
 		'harmonica',
 		'cello',
-		'ukilele',
+		'ukulele',
 		'violin',
 		'didgeridoo',
 		'mallet',
