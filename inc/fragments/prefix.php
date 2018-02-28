@@ -17,6 +17,10 @@ class prefix extends fragments {
 		'neo-',
 		'shibuya-',
 		'turbo-',
+		// Regional hyphenated.
+		'c-',
+		'k-',
+		'j-',
 		// Contractions.
 		'aggro',
 		'aust',
@@ -68,6 +72,11 @@ class prefix extends fragments {
 		'void',
 		'volks',
 		'zap',
+		// Regional contractions.
+		'afro',
+		'aussie',
+		'austro',
+		'euro',
 	];
 
 	private function translatable_prefixes() {
