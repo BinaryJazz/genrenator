@@ -260,8 +260,26 @@ class adjective extends fragments {
 		'zouk',
 	];
 
+	private function translatable_prefixes() {
+		$instrument = new instrument();
+		return [
+			__( 'stomp and ', 'genrenator' ),   // Since this is a phrase, we'll make it translatable.
+			__( 'drum and ', 'genrenator' ),    // This is also a phrase.
+			__( 'jig and ', 'genrenator' ),     // This is also a phrase.
+			__( 'rhythm and ', 'genrenator' ),  // This is also a phrase.
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-driven ', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-heavy ', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-based ', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-centric ', 'genrenator' ), $instrument->get_element() ),
+		];
+	}
+
 	public function elements() {
-		return self::ADJECTIVES;
+		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
 	}
 
 	public function texturize() {
