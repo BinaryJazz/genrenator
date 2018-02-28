@@ -43,8 +43,4 @@ class beat extends fragments {
 	public function elements() {
 		return $this->beats();
 	}
-
-	public function texturize() {
-		return parent::texturize() . ' ';
-	}
 }

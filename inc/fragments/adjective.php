@@ -282,8 +282,4 @@ class adjective extends fragments {
 		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
 	}
 
-	public function texturize() {
-		return ' ' . parent::texturize() . ' ';
-	}
-
 }
