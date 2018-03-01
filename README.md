@@ -1,7 +1,7 @@
 # Genrenator #
 **Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)  
 **Description:**       Random genre creation API.  
-**Stable tag:**        1.0  
+**Stable tag:**        1.1  
 **License:**           GPLv3  
 **License URI:**       http://www.gnu.org/licenses/gpl-3.0.html  
 
@@ -40,6 +40,11 @@ Testing the plugin locally (or via the API) is a lot of help in identifying bugs
 2. Activate Genrenator through the 'Plugins' menu in WordPress.
 
 ## Changelog ##
+
+### 1.1 ###
+* fixed issue where some prefixes and suffixes that were supposed to not have spaces after/before them had them. This was done by a significant refactor which included consolidating some prefixes and suffixes and adding a new fragment type called "post", which also involved adding a new set of patterns.
+* added the ability to share genres and genre stories on twitter
+* added the ability to link back to favorite genres and genre stories.
 
 ### 1.0 ###
 * first major release.
