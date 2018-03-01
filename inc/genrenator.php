@@ -22,30 +22,40 @@ function patterns() {
 	return [
 		'%beat%# #%genre%',
 		'%prefix%#%genre%#%suffix%',
-		'%adjective%#%genre%',
-		'%adjective%#%region%#%genre%',
+		'%adjective%# #%genre%',
+		'%adjective%# #%region%# #%genre%',
 		'%prefix%#%genre%',
-		'%region%#%prefix%#%genre%#%suffix%',
-		'%region%#%genre%#%suffix%',
+		'%region%# #%prefix%# #%genre%#%suffix%',
+		'%region%# #%genre%#%suffix%',
 		'%genre%#%suffix%',
 		'%prefix%#%genre%#/#%genre%#%suffix%',
-		'%region%#%genre%',
+		'%region%# #%genre%',
 		'the #%beat%# of #%genre%',
 		'%instrument%# #%beat%',
-		'%adjective%#%adjective%#%genre%',
+		'%adjective%# #%adjective%# #%genre%',
 		'%prefix%#%suffix%',
-		'%adjective%#%prefix%#%suffix%',
-		'%prefix%#%prefix%#%genre%',
-		'%adjective%#%region%#%genre%',
-		'%instrument%#%genre%',
+		'%adjective%# #%prefix%#%suffix%',
+		'%adjective%# #%prefix%#%genre%',
+		'%adjective%# #%region%# #%genre%',
+		'%instrument%# #%genre%',
 		'%region%#%suffix%',
 		'%genre%# #%instrument%',
-		'%adjective%#%suffix%#%suffix%',
-		'%genre%#%genre%',
-		'%region%#%instrument%',
-		'%region%#%instrument%#%suffix%',
-		'%adjective%#%instrument%#%suffix%',
-		'%adjective%#%instrument%',
+		'%adjective%#%suffix%# #%post%',
+		'%genre%# #%genre%',
+		'%region%# #%instrument%',
+		'%region%# #%instrument%#%suffix%',
+		'%adjective%# #%instrument%#%suffix%',
+		'%adjective%# #%instrument%',
+		'%prefix%#%genre%# #%post%',
+		'%region%# #%prefix%# #%genre%# #%post%',
+		'%region%# #%genre%# #%post%',
+		'%genre%# #%post%',
+		'%prefix%#%genre%#/#%genre%# #%post%',
+		'%prefix%#%post%',
+		'%adjective%# #%prefix%#%post%',
+		'%region%# #%post%',
+		'%region%# #%instrument%# #%post%',
+		'%adjective%# #%instrument%# #%post%',
 	];
 }
 
@@ -142,10 +152,10 @@ function filter_string( $shards ) {
 		$string = str_replace( [ ' /', '/ ' ], '/', $string );
 	}
 
-	// Let's not have any accidental rapism.
-	if ( strpos( $string, 'rapism' ) ) {
-		$string = str_replace( 'rapism', 'rap', $string );
+	// Let's not have any accidental rapism or rapia.
+	if ( strpos( $string, 'rapism' ) || strpos( $string, 'rapia' ) ) {
+		$string = str_replace( [ 'rapism', 'rapia' ], 'rap', $string );
 	}
 
-	return $string;
+	return filter_extra_spaces( $string );
 }

@@ -10,10 +10,14 @@ class adjective extends fragments {
 		'21st century',
 		// A.
 		'abstract',
+		'acid',
 		'acoustic',
 		'adult',
 		'aggressive',
 		'album',
+		'alt',
+		'ambient',
+		'anthem',
 		'arena',
 		'art',
 		'artistic',
@@ -37,6 +41,7 @@ class adjective extends fragments {
 		// C.
 		'candy',
 		'calming',
+		'cat',
 		'chamber',
 		'chaotic',
 		'charred',
@@ -71,10 +76,12 @@ class adjective extends fragments {
 		'doom',
 		'dream',
 		'drone',
+		'dwn',
 		// E.
 		'early',
 		'easy',
 		'electroacoustic',
+		'emo',
 		'escape',
 		'ethereal',
 		'experimental',
@@ -150,10 +157,12 @@ class adjective extends fragments {
 		'movie',
 		// N.
 		'nasty',
+		'neo',
 		'new',
 		'ninja',
 		'no',
 		'noise',
+		'nu',
 		// O.
 		'ok',
 		'operatic',
@@ -181,6 +190,7 @@ class adjective extends fragments {
 		'reggaeton',
 		'regional',
 		'religious',
+		'retro',
 		'rippling',
 		'riot',
 		'romantic',
@@ -218,6 +228,7 @@ class adjective extends fragments {
 		'terror',
 		'third wave',
 		'thrash',
+		'trad',
 		'traditional',
 		'tribal',
 		'tribute',
@@ -249,12 +260,26 @@ class adjective extends fragments {
 		'zouk',
 	];
 
-	public function elements() {
-		return self::ADJECTIVES;
+	private function translatable_prefixes() {
+		$instrument = new instrument();
+		return [
+			__( 'stomp and', 'genrenator' ),   // Since this is a phrase, we'll make it translatable.
+			__( 'drum and', 'genrenator' ),    // This is also a phrase.
+			__( 'jig and', 'genrenator' ),     // This is also a phrase.
+			__( 'rhythm and', 'genrenator' ),  // This is also a phrase.
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-driven', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-heavy', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-based', 'genrenator' ), $instrument->get_element() ),
+			// Translators: %s is a random instrument.
+			sprintf( __( '%s-centric', 'genrenator' ), $instrument->get_element() ),
+		];
 	}
 
-	public function texturize() {
-		return parent::texturize() . ' ';
+	public function elements() {
+		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
 	}
 
 }

@@ -29,80 +29,9 @@ class suffix extends fragments {
 		'tune',
 		'ia',
 		'down',
-		'punk',
-		' star',
-		' trip',
-		' polo',
-		' whittle',
-		' house',
-		' party',
-		' steady',
-		' chileno',
-		' chill',
-		' road',
-		' music',
-		' gold',
-		' wave',
-		' room',
-		' dirt',
-		' electronica',
-		' ensembles',
-		' fusion',
-		' punk',
-		' holler',
-		' reel',
-		' remix',
-		' product',
-		' grrl',
-		' storm',
-		' flow',
-		' français',
-		' gaucho',
-		' sonidera',
-		' urbano',
-		' international',
-		' trio',
-		' quartet',
-		' quintet',
-		' sextet',
-		' napoletana',
-		' revival',
-		' catala',
 	];
 
-	public function translatable_suffixes() {
-		$instrument = new instrument();
-		return [
-			__( ' in the dark', 'genrenator' ), // Since this is a phrase, we'll make it translatable.
-			// Translators: %s is a random instrument.
-			sprintf( __( ' with hints of %s', 'genrenator' ), $instrument->get_element() ),
-			// Translators: %s is a random instrument.
-			sprintf( __( ' with prominent %s', 'genrenator' ), $instrument->get_element() ),
-		];
-	}
-
 	public function elements() {
-		return array_merge( self::SUFFIXES, $this->translatable_suffixes());
-	}
-
-	/**
-	 * Return an array of suffixes that don't have spaces.
-	 *
-	 * @since  0.2
-	 * @return array Array of suffixes that don't have spaces.
-	 */
-	public static function no_space_suffixes() {
-		static $kellen;
-
-		if ( count( $kellen ) ) {
-			return $kellen;
-		}
-
-		$suffixes = self::SUFFIXES;
-		$kellen   = array_filter( $suffixes, function ( $suffix ) {
-			return strpos( $suffix, ' ' ) === false;
-		} );
-
-		return $kellen;
+		return self::SUFFIXES;
 	}
 }

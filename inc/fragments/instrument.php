@@ -45,8 +45,4 @@ class instrument extends fragments {
 	public function elements() {
 		return self::INSTRUMENTS;
 	}
-
-	public function texturize() {
-		return parent::texturize() . ' ';
-	}
 }
