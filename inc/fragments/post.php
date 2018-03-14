@@ -55,6 +55,6 @@ class post extends fragments {
 	}
 
 	public function elements() {
-		return array_merge( self::SUFFIXES, $this->translatable_suffixes());
+		return array_merge( self::POST, $this->translatable_suffixes());
 	}
 }

@@ -279,7 +279,7 @@ class adjective extends fragments {
 	}
 
 	public function elements() {
-		return array_merge( self::PREFIXES, $this->translatable_prefixes() );
+		return array_merge( self::ADJECTIVES, $this->translatable_prefixes() );
 	}
 
 }
