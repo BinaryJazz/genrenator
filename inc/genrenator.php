@@ -40,7 +40,7 @@ function patterns() {
 		'%instrument%# #%genre%',
 		'%region%#%suffix%',
 		'%genre%# #%instrument%',
-		'%adjective%#%suffix%# #%post%',
+		'%adjective%# #%suffix%# #%post%',
 		'%genre%# #%genre%',
 		'%region%# #%instrument%',
 		'%region%# #%instrument%#%suffix%',
