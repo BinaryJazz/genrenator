@@ -141,9 +141,7 @@ function filter_string( $shards ) {
 
 	$i = 0;
 	foreach ( $shards as $shard ) {
-		if ( in_array( $shard, Fragments\suffix::no_space_suffixes() ) || in_array( $shard, Fragments\prefix::no_space_prefixes() ) ) {
-			$shards[ $i ] = trim( $shard );
-		}
+		$shards[ $i ] = trim( $shard );
 		$i++;
 	}
 
