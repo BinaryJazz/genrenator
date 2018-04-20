@@ -19,6 +19,10 @@ function bootstrap() {
 	add_shortcode( 'genrenator-genre', __NAMESPACE__ . '\\shortcode_genre' );
 	add_shortcode( 'genrenator-story', __NAMESPACE__ . '\\shortcode_story' );
 
+
+	add_shortcode( 'genrenator-genre-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
+	add_shortcode( 'genrenator-story-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
+
 	// API.
 	add_action( 'rest_api_init', __NAMESPACE__ . '\\API\\register_routes' );
 }
@@ -47,6 +51,15 @@ function shortcode_genre() {
 }
 
 /**
+ * Sometimes you just need a little bit of text.
+ *
+ * @return string
+ */
+function shortcode_genre_slim() {
+	return esc_html( generate_genre() );
+}
+
+/**
  * Callback for genre-story shortcode.
  *
  * @since  0.1
@@ -68,6 +81,15 @@ function shortcode_story() {
 	<?php
 	$story_html = ob_get_clean();
 	return $story_html . $tweet_button;
+}
+
+/**
+ * Sometimes you just need a little bit of text.
+ *
+ * @return string
+ */
+function shortcode_story_slim() {
+	return esc_html( Storynator\generate_story() );
 }
 
 /**
