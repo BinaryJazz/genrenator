@@ -69,6 +69,8 @@ function generate_genre() {
 	$patterns = patterns();
 	$index    = array_rand( $patterns );
 
+	update_option( 'generate_genre', get_option( 'generate_genre', 0 ) + 1, false );
+
 	return concat_fragments( $patterns[ $index ] );
 }
 
