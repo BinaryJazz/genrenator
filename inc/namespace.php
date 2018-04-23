@@ -52,6 +52,7 @@ function shortcode_genre() {
 /**
  * Sometimes you just need a little bit of text.
  *
+ * @since  1.2
  * @return string
  */
 function shortcode_genre_slim() {
@@ -85,6 +86,7 @@ function shortcode_story() {
 /**
  * Sometimes you just need a little bit of text.
  *
+ * @since  1.2
  * @return string
  */
 function shortcode_story_slim() {
