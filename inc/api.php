@@ -70,10 +70,21 @@ function get_genre_api( $data ) {
 		return Genrenator\get_genre();
 	}
 
-	$genres = [];
+	$count = $count > 1000 ? 1000 : $count;
 
+	$genres = get_transient( 'genre_' . $count );
+
+	if ( $genres ) {
+		return $genres;
+	}
+
+	$genres = [];
 	for ( $i = 0; $i < $count; $i++ ) {
 		$genres[ $i ] = Genrenator\get_genre();
+	}
+
+	if( $count > 100 ) {
+		set_transient( 'genre_' . $count, $genres, $count );
 	}
 
 	return $genres;
