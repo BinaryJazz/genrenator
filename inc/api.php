@@ -54,6 +54,12 @@ function register_routes() {
 			],
 		],
 	] );
+
+	// Count endpoint.
+	register_rest_route( 'genrenator/v1', 'count', [
+		'methods'  => 'GET',
+		'callback' => '\\BinaryJazz\\Genrenator\\genre_count',
+	] );
 }
 
 /**
