@@ -18,7 +18,7 @@ function bootstrap() {
 	// Shortcodes.
 	add_shortcode( 'genrenator-genre', __NAMESPACE__ . '\\shortcode_genre' );
 	add_shortcode( 'genrenator-story', __NAMESPACE__ . '\\shortcode_story' );
-	add_shortcode( 'genrenator-genre-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
+	add_shortcode( 'genrenator-genre-slim', __NAMESPACE__ . '\\shortcode_genre_slim' );
 	add_shortcode( 'genrenator-story-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
 	add_shortcode( 'genrenator-count', __NAMESPACE__ . '\\shortcode_genre_count' );
 
