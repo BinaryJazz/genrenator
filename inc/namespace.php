@@ -24,6 +24,7 @@ function bootstrap() {
 
 	// API.
 	add_action( 'rest_api_init', __NAMESPACE__ . '\\API\\register_routes' );
+	add_action( 'genrenator_increment_genre_count', __NAMESPACE__ . '\\increment_genre_count' );
 }
 
 /**
