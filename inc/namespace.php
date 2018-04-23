@@ -18,10 +18,9 @@ function bootstrap() {
 	// Shortcodes.
 	add_shortcode( 'genrenator-genre', __NAMESPACE__ . '\\shortcode_genre' );
 	add_shortcode( 'genrenator-story', __NAMESPACE__ . '\\shortcode_story' );
-
-
 	add_shortcode( 'genrenator-genre-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
 	add_shortcode( 'genrenator-story-slim', __NAMESPACE__ . '\\shortcode_story_slim' );
+	add_shortcode( 'genrenator-count', __NAMESPACE__ . '\\shortcode_genre_count' );
 
 	// API.
 	add_action( 'rest_api_init', __NAMESPACE__ . '\\API\\register_routes' );
@@ -90,6 +89,16 @@ function shortcode_story() {
  */
 function shortcode_story_slim() {
 	return esc_html( Storynator\generate_story() );
+}
+
+/**
+ * Return a formatted total of genres created.
+ *
+ * @since  1.2
+ * @return string The number of genres.
+ */
+function shortcode_genre_count() {
+	return number_format_i18n( get_option( 'generate_genre' ) );
 }
 
 /**
