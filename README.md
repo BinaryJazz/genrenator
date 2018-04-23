@@ -11,11 +11,16 @@ Genrenator is a random genre creation engine and API for all your genre-creation
 ## How do I use it? ##
 Right now you can install this on your WordPress site and use one of the two built-in shortcodes.
 
-`[genrenator-genre]` will give you a randomly generated genre.  
+`[genrenator-genre]` will give you a randomly generated genre with a Tweet button to share it on social media.  
 [Demo](https://binaryjazz.us/genrenator/)
 
 `[genrenator-story]` will give you a story/memory associated with a genre.  
 [Demo](https://binaryjazz.us/genrenator-story/)
+
+**Other shortcodes**  
+`[genrenator-genre-slim]` just gives you a genre with no formatting and no social media button.  
+`[genrenator-story-slim]` just gives you a story with no formatting and no social media button.
+`[genrenator-count]` gives you a count of how many genres have been created to date.  
 
 You can also access the [public Genrenator API](https://binaryjazz.us/wp-json/genrenator/v1/) on Binary Jazz. (See [documentation](https://binaryjazz.us/genrenator-api).)
 
