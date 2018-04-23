@@ -40,6 +40,19 @@ class instrument extends fragments {
 		'organ',
 		'clarinet',
 		'saxophone',
+		'trumpet',
+		'french horn',
+		'fiddle',
+		'mandolin',
+		'banjolin',
+		'cuatro',
+		'euphonium',
+		'xylophone',
+		'viola',
+		'cornet',
+		'flugelhorn',
+		'tuba',
+		'sousaphone',
 	];
 
 	public function elements() {

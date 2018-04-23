@@ -69,7 +69,24 @@ function generate_genre() {
 	$patterns = patterns();
 	$index    = array_rand( $patterns );
 
+	/**
+	 * Fires the action to update the genre count when a genre is created.
+	 *
+	 * @param int $count The current total of genres.
+	 */
+	do_action( 'genrenator_increment_genre_count', get_option( 'generate_genre', 0 ) );
+
 	return concat_fragments( $patterns[ $index ] );
+}
+
+/**
+ * Increment the running total of genres.
+ *
+ * @since  1.2
+ * @param  int $count The genre count.
+ */
+function increment_genre_count( $count ) {
+	update_option( 'generate_genre', $count + 1, false );
 }
 
 /**
