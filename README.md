@@ -1,7 +1,7 @@
 # Genrenator #
 **Contributors:**      [Allison Tarr](https://github.com/allisonplus), [Chris Reynolds](https://github.com/jazzsequence), [Gary Kovar](https://github.com/binarygary)  
 **Description:**       Random genre creation API.  
-**Stable tag:**        1.2  
+**Stable tag:**        1.2.1  
 **License:**           GPLv3  
 **License URI:**       http://www.gnu.org/licenses/gpl-3.0.html  
 
@@ -41,10 +41,14 @@ Testing the plugin locally (or via the API) is a lot of help in identifying bugs
 
 ### Manual Installation ###
 
-1. Upload the entire `/genrenator-1` directory to the `/wp-content/plugins/` directory.
+1. Upload the entire `/genrenator` directory to the `/wp-content/plugins/` directory.
 2. Activate Genrenator through the 'Plugins' menu in WordPress.
 
 ## Changelog ##
+
+### 1.2.1 ###
+* Adds `hetero` as a prefix. See [Binary Jazz Episode 1111111](https://binaryjazz.us/2021/05/14/episode-1111111-heterochromia/).
+* Adds `chromia` as a suffix. See [Binary Jazz Episode 1111111](https://binaryjazz.us/2021/05/14/episode-1111111-heterochromia/).
 
 ### 1.2 ###
 * Now stores a running count of all genres created.

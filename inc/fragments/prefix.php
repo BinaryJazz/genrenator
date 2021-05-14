@@ -48,6 +48,7 @@ class prefix extends fragments {
 		'grind',
 		'hard',
 		'hate',
+		'hetero',
 		'indo',
 		'kinder',
 		'math',

@@ -29,6 +29,7 @@ class suffix extends fragments {
 		'tune',
 		'ia',
 		'down',
+		'chromia',
 	];
 
 	public function elements() {
